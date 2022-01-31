@@ -1,0 +1,29 @@
+* {
+  /* this tell the browser to ignore the borders and calculate the width only */
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  height: 100px;
+  border: 3px solid black;
+  clear: both;
+}
+
+.one-col {
+  height: 200px;
+  border: 1px solid black;
+}
+
+#first-col {
+  width: 40%;
+  height: 300px;
+  border: 3px solid black;
+  float: left;
+}
+#second-col {
+  width: 60%;
+  height: 300px;
+  border: 3px solid black;
+  float: left;
+}

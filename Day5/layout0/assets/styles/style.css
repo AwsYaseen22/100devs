@@ -1,0 +1,33 @@
+* {
+  /* this tell the browser to ignore the borders and calculate the width only */
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: lightpink;
+}
+
+section {
+  width: 33.33%;
+  height: 300px;
+  border: 1px solid black;
+  float: left;
+}
+#one {
+  background-color: lightsalmon;
+}
+#two {
+  background-color: lightgreen;
+}
+#three {
+  background-color: lightslategray;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: lightgray;
+  clear: both;
+}

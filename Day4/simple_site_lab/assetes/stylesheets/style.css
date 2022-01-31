@@ -7,14 +7,11 @@ body {
 }
 header,
 footer {
-  width: 100%;
   margin: 50px auto;
   text-align: center;
 }
 section {
   width: 80%;
-  height: 100%;
-  /* background-color: rgba(117, 200, 232, 0.9); */
   padding: 10px 50px;
   border: 5px solid rgba(0, 200, 0, 0.5);
   margin: 30px auto;
@@ -32,14 +29,14 @@ li {
   display: inline-block;
 }
 a {
-  text-decoration: none;
   color: rgba(0, 200, 0, 0.5);
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
-a:current {
-  color: red;
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 span {
@@ -50,13 +47,13 @@ h2 {
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  font-size: 25px;
 }
 
 p {
   color: white;
-  /* float: left; */
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
 }
 img {
   width: 200px;
