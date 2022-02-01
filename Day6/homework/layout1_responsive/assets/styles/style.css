@@ -1,0 +1,63 @@
+* {
+  /* this tell the browser to ignore the borders and calculate the width only */
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+header,
+footer {
+  height: 100px;
+  border: 3px solid black;
+  clear: both;
+}
+
+.three-col {
+  background-color: red;
+  padding: 20px;
+}
+
+.two-col {
+  background-color: green;
+  padding: 20px;
+}
+
+.three-col > section {
+  width: 33.33%;
+  height: 200px;
+  border: 1px solid black;
+  float: left;
+}
+
+.two-col > section {
+  width: 50%;
+  height: 300px;
+  border: 3px solid black;
+  float: left;
+}
+
+@media screen and (max-width: 600px) {
+  .three-col > section {
+    width: 100%;
+    float: none;
+  }
+
+  .two-col > section {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .three-col,
+  .two-col {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
