@@ -29,35 +29,51 @@ footer {
   padding: 20px;
 }
 
-.three-col > section {
+.three-col section {
   width: 33.33%;
   height: 200px;
   border: 1px solid black;
   float: left;
 }
 
-.two-col > section {
+.two-col section {
   width: 50%;
   height: 300px;
-  border: 3px solid black;
+  border: 1px solid black;
   float: left;
 }
 
 @media screen and (max-width: 600px) {
-  .three-col > section {
+  .three-col,
+  .two-col {
+    padding: 0;
+  }
+  .three-col section {
     width: 100%;
     float: none;
   }
 
-  .two-col > section {
+  .two-col section {
     width: 100%;
     float: none;
   }
 }
-@media screen and (min-width: 1700px) {
+
+@media (min-width: 601px) and (max-width: 900px) {
   .three-col,
   .two-col {
-    width: 80%;
+    padding: 0;
+  }
+  .three-col section {
+    background-color: blue;
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .three-col,
+  .two-col {
+    width: 90%;
     margin: 0 auto;
   }
 }

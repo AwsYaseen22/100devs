@@ -15,7 +15,7 @@
 header,
 footer {
   height: 100px;
-  border: 3px solid black;
+  border: 1px solid black;
   clear: both;
 }
 
@@ -30,40 +30,53 @@ footer {
   padding: 20px;
 }
 
-#first-col {
-  width: 40%;
+.first-col,
+.second-col {
   height: 300px;
-  border: 3px solid black;
+  border: 1px solid black;
   float: left;
 }
-#second-col {
+.first-col {
+  width: 40%;
+}
+.second-col {
   width: 60%;
-  height: 300px;
-  border: 3px solid black;
-  float: left;
 }
 
 @media screen and (max-width: 600px) {
-  #first-col {
-    width: 100%;
-    float: none;
-  }
-  #second-col {
-    width: 100%;
-    float: none;
-  }
+  /* .one-col {
+    margin: 0;
+  } */
   .two-col {
     padding: 0;
   }
+  .first-col {
+    width: 100%;
+    float: none;
+  }
+  .second-col {
+    width: 100%;
+    float: none;
+  }
 }
 
-@media screen and (min-width: 1700px) {
+@media (min-width: 610px) and (max-width: 900px) {
+  .two-col {
+    padding: 0;
+  }
+  .first-col,
+  .second-col {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .one-col {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
   .two-col {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 }

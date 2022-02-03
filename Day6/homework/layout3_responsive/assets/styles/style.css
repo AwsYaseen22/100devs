@@ -16,38 +16,27 @@ section {
   float: left;
 }
 
-#first-col,
-#third-col,
-#fourth-col {
+.small-col {
   width: 20%;
 }
-#second-col {
+.big-col {
   width: 40%;
 }
 
 @media screen and (max-width: 600px) {
-  #first-col,
-  #third-col,
-  #fourth-col,
-  #second-col {
+  .small-col,
+  .big-col {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1600px) {
   body {
     width: 80%;
     margin: 0 auto;
   }
-  section {
+  /* section {
     width: 80%;
-    /* margin: 0 auto; */
-  }
-  /* #third-col,
-  #fourth-col,
-  #first-col,
-  #second-col {
-    background-color: lightpink;
   } */
   section:nth-child(even) {
     background-color: lightpink;
@@ -58,24 +47,32 @@ section {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
-  #third-col,
-  #fourth-col {
+  /* section:nth-of-type(1) {
     background-color: aqua;
-  }
-  #third-col {
-    width: 60%;
-  }
-  #fourth-col {
+  } */
+  section:first-of-type {
+    background-color: aqua;
     width: 40%;
   }
-  #first-col,
-  #second-col {
+  section:last-of-type {
+    background-color: aqua;
+    width: 40%;
+  }
+  section:nth-of-type(2) {
     background-color: lightpink;
-  }
-  #first-col {
-    width: 40%;
-  }
-  #second-col {
     width: 60%;
   }
+  section:nth-of-type(3) {
+    background-color: lightpink;
+    width: 60%;
+  }
+  /* .big-col {
+    width: 60%;
+  }
+  .small-col {
+    width: 40%;
+  }
+  section.small-col + section.big-col {
+    background-color: lightpink;
+  } */
 }
