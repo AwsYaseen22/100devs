@@ -49,7 +49,7 @@ body h1 {
 header {
   height: 50px;
   padding: 0 20px;
-  background-color: rgb(85, 107, 129);
+  background-color: rgb(85, 107, 129, 0.95);
 }
 nav {
   width: 40%;
@@ -86,7 +86,7 @@ div.logo-container > img {
   padding: 0;
 }
 a.button {
-  color: rgb(85, 107, 129);
+  color: rgb(85, 107, 129, 0.95);
   background-color: white;
   padding: 10px 10px;
   font-weight: bold;
@@ -100,7 +100,7 @@ a.button {
 /* Main */
 main {
   height: 500px;
-  background: rgb(85, 107, 129);
+  background-color: rgb(85, 107, 129, 0.95);
   width: 100%;
   color: white;
   text-align: center;
@@ -116,6 +116,8 @@ main p {
   font-weight: bold;
   line-height: 1.5;
   padding: 2% 10%;
+  color: whitesmoke;
+  text-align: center;
 }
 main span {
   display: inline-block;
@@ -137,6 +139,7 @@ section.why-section p {
   font-size: 1.3rem;
   text-align: center;
   line-height: 1.5;
+  color: rgb(45, 45, 45);
 }
 
 /* second-section */
@@ -155,7 +158,7 @@ section.why-section p {
 .placeholder {
   width: 400px;
   height: 250px;
-  background-color: rgb(85, 107, 129);
+  background-color: rgb(85, 107, 129, 0.95);
   margin: 20px auto;
 }
 .second-section h4 {
@@ -167,9 +170,10 @@ section.why-section p {
   font-size: 1.2rem;
   text-align: center;
   padding: 10px 50px;
+  color: rgb(45, 45, 45);
 }
 .text-button {
-  color: rgb(85, 107, 129);
+  color: rgb(85, 107, 129, 0.95);
   background-color: transparent;
   padding: 10px 0;
   font-weight: bold;
@@ -198,6 +202,7 @@ section.volunteer-section p {
   text-align: center;
   line-height: 1.5;
   padding: 10px;
+  color: rgb(45, 45, 45);
 }
 .volunteer-section .text-button {
   width: 20%;
