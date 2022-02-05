@@ -1,0 +1,291 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+body h1 {
+  font-size: 50%;
+}
+/* body p {
+  font-size: 30%;
+} */
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Header */
+header {
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgb(85, 107, 129);
+}
+nav {
+  width: 40%;
+  float: left;
+  /* background-color: rosybrown; */
+  height: 100%;
+}
+header li {
+  display: inline-block;
+  margin: 10px 10px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logo-container {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+div.logo-container > img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.header-left {
+  float: right;
+  width: 40%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a.button {
+  color: rgb(85, 107, 129);
+  background-color: white;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  float: right;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+/* Main */
+main {
+  height: 500px;
+  background: rgb(85, 107, 129);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 5% 10%;
+  /* border: 2px solid black; */
+  margin: 0;
+}
+main h1 {
+  font-size: 3.5rem;
+}
+main p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 2% 10%;
+}
+main span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Why section */
+section.why-section {
+  height: 400px;
+  background-color: white;
+  padding: 5% 30%;
+}
+section.why-section h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 20px;
+}
+section.why-section p {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* second-section */
+.second-section {
+  height: 700px;
+  background-color: rgb(212, 219, 222);
+  padding: 7% 5%;
+}
+
+.second-section > section {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.placeholder {
+  width: 400px;
+  height: 250px;
+  background-color: rgb(85, 107, 129);
+  margin: 20px auto;
+}
+.second-section h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+}
+.second-section p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px 50px;
+}
+.text-button {
+  color: rgb(85, 107, 129);
+  background-color: transparent;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid rgb(85, 107, 129);
+  text-decoration: none;
+  display: block;
+  width: 30%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Why section */
+section.volunteer-section {
+  height: 600px;
+  background-color: white;
+  padding: 10% 20%;
+}
+section.volunteer-section h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 20px;
+}
+section.volunteer-section p {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 10px;
+}
+.volunteer-section .text-button {
+  width: 20%;
+}
+
+/* footer */
+footer {
+  height: 280px;
+  background-color: rgb(19, 29, 38);
+}
+footer section {
+  width: 50%;
+  height: 200px;
+  float: left;
+}
+section.footer-under {
+  height: 80px;
+  width: 95%;
+  margin: 0 auto;
+  border-top: 1px solid rgb(187, 187, 187);
+  float: none;
+  clear: both;
+  padding-top: 10px;
+  color: rgb(187, 187, 187);
+}
+section.footer-under h6 {
+  margin-top: 10px;
+  float: left;
+}
+section.footer-under img {
+  height: 30px;
+  float: right;
+}
+
+.left-footer span {
+  color: grey;
+  display: block;
+  margin-top: 20px;
+  /* margin: 5px 20px; */
+}
+.left-footer li {
+  color: rgb(187, 187, 187);
+  display: inline-block;
+  margin-right: 10px;
+  /* margin: 5px 20px; */
+}
+.left-footer a {
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+}
+.right-footer,
+.left-footer {
+  padding: 20px;
+}
+.right-footer h6,
+p {
+  color: rgb(187, 187, 187);
+  text-align: right;
+  margin: 5px 20px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+/* social media icons */
+.fa {
+  padding: 3px 3px 0 7px;
+  /* font-size: 30px; */
+  /* width: 20px; */
+  text-align: center;
+  text-decoration: none;
+  /* margin: 5px 2px; */
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.left-footer a.fa-facebook {
+  background-color: rgb(187, 187, 187);
+  color: rgb(19, 29, 38);
+}
+
+.fa-twitter {
+  /* background: white; */
+  color: white;
+}
+.fa-envelope {
+  /* background: white; */
+  color: white;
+}

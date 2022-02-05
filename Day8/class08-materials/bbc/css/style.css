@@ -1,0 +1,192 @@
+/* Box Model Hack */
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {
+  width: 100%;
+  background-color: black;
+  height: 55px;
+  margin: 0;
+  padding: 0 10%;
+  font-size: 16px;
+}
+
+.header-left {
+  height: 55px;
+  background-color: blanchedalmond;
+  float: left;
+}
+
+.header-left > img {
+  height: 55px;
+  width: auto;
+  padding: 2% 0;
+  float: left;
+}
+.header-left > ul {
+  display: inline;
+  float: left;
+}
+.header-left li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-left a {
+  text-decoration: none;
+  color: white;
+}
+
+i {
+  color: red;
+  font-size: 100px;
+}
+nav {
+  width: 60%;
+  height: 55px;
+  background-color: coral;
+  float: left;
+}
+.header-right {
+  width: 20%;
+  background-color: blanchedalmond;
+  height: 55px;
+  float: left;
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+section.main-title {
+  background-color: cornflowerblue;
+  height: 50px;
+  margin: 20px 0;
+  margin-top: 30px;
+}
+.main-title > h2 {
+  width: 50%;
+  height: 50px;
+  background-color: coral;
+  float: left;
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+}
+.main-news {
+  width: 100%;
+  height: 500px;
+  background-color: coral;
+}
+
+.main-news-l {
+  width: 50%;
+  height: 500px;
+  background-color: blueviolet;
+  float: left;
+}
+.main-news-r {
+  width: 50%;
+  height: 500px;
+  background-color: brown;
+  float: left;
+}
+
+.main-news-r section {
+  width: 50%;
+  height: 50%;
+  /* background-color: brown; */
+  border: 1px solid blue;
+  float: left;
+}
+
+.secondary-news {
+  width: 80%;
+  height: 400px;
+  background-color: cadetblue;
+  margin: 0 auto;
+}
+.secondary-news > h2 {
+  background-color: rebeccapurple;
+  height: 50px;
+}
+.secondary-news section {
+  background-color: royalblue;
+  height: 350px;
+  width: 33.333%;
+  float: left;
+  border: 1px solid black;
+}
+
+/* header {
+  color: white;
+  background-color: black;
+  height: 55px;
+}
+nav {
+  height: 100%;
+}
+nav * {
+  float: left;
+  width: 10%;
+  color: white;
+  display: block;
+}
+nav > img {
+  height: 30px;
+  width: auto;
+  margin: auto;
+}
+
+nav ul {
+  width: 50%;
+}
+nav form input {
+  width: 100%;
+}
+
+main + section section {
+  width: 33.333%;
+  float: left;
+}
+
+main > section {
+  width: 50%;
+  height: 500px;
+  float: left;
+}
+
+main > section + section > section {
+  width: 50%;
+  float: left;
+  border: 1px solid black;
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
