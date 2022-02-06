@@ -1,0 +1,287 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  width: 100%;
+  min-width: 400px;
+  font-size: 100%;
+}
+/* body h1 {
+  font-size: 50%;
+} */
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Header */
+header {
+  height: 50px;
+  padding: 0 20px;
+  background-color: rgb(243, 248, 251);
+}
+nav {
+  width: 60%;
+  float: left;
+  height: 100%;
+}
+
+nav ul {
+  text-align: center;
+}
+header li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+nav a {
+  background-color: red;
+  text-decoration: none;
+  color: rgb(85, 107, 129, 0.95);
+  font-size: 1rem;
+  font-weight: bold;
+}
+nav a:hover {
+  color: rgb(85, 107, 129, 0.95);
+  background-color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.header-logo {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+div.header-logo > img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.header-right {
+  float: right;
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a.button {
+  color: rgb(85, 107, 129, 0.95);
+  background-color: white;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  float: right;
+  margin: 5px 0;
+  text-decoration: none;
+}
+a.button:hover {
+  color: whitesmoke;
+  background-color: rgba(49, 69, 88, 0.95);
+}
+
+/* Main */
+main {
+  height: 500px;
+  background-color: rgb(85, 107, 129, 0.95);
+  width: 100%;
+  color: white;
+  text-align: center;
+  /* padding: 5% 10%; */
+  margin: 0;
+}
+main h1 {
+  font-size: 3.5rem;
+}
+main p {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  /* padding: 2% 10%; */
+  color: whitesmoke;
+  text-align: left;
+}
+
+/* Why section */
+section.grid-section {
+  height: 400px;
+  background-color: white;
+  padding: 5% 30%;
+}
+section.grid-section h3 {
+  font-size: 2.5rem;
+  text-align: left;
+  /* padding: 20px; */
+}
+section.grid-section p {
+  font-size: 1.3rem;
+  text-align: left;
+  line-height: 1.5;
+  color: rgb(45, 45, 45);
+}
+
+/* second-section */
+.second-section {
+  height: 700px;
+  background-color: rgb(212, 219, 222);
+  padding: 7% 5%;
+}
+
+.placeholder {
+  width: 70%;
+  height: 250px;
+  background-color: rgb(85, 107, 129, 0.95);
+  margin: 20px auto;
+}
+.second-section h4 {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 10px;
+}
+.second-section p {
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 10px 50px;
+  color: rgb(45, 45, 45);
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* @media (min-width: 1200px) and (max-width: 1500px) {
+  main h1 {
+    font-size: 3rem;
+  }
+  section.grid-section {
+    padding: 5% 20%;
+  }
+} */
+
+/* @media (min-width: 900px) and (max-width: 1199px) {
+  body {
+    width: 90%;
+  }
+  main h1 {
+    font-size: 2.2rem;
+  }
+  section.grid-section {
+    padding: 5% 5%;
+  }
+  section.volunteer-section {
+    padding: 10% 5%;
+  }
+  .second-section {
+    padding: 5% 1%;
+  }
+  .placeholder {
+    width: 80%;
+  }
+  .second-section p {
+    padding: 10px 10px;
+  }
+} */
+
+/* @media screen and (max-width: 899px) {
+  body {
+    width: 100%;
+  }
+  header {
+    padding: 0 10px;
+  }
+  header li {
+    margin: 10px 3px;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  main {
+    height: 400px;
+    padding: 5% 5%;
+  }
+  main h1 {
+    font-size: 2rem;
+  }
+  main p {
+    font-size: 16px;
+    padding: 2% 5%;
+  }
+  section.grid-section {
+    height: 300px;
+    padding: 5% 5%;
+  }
+  section.grid-section h3 {
+    font-size: 2rem;
+  }
+  section.grid-section p {
+    font-size: 1.1rem;
+  }
+  .second-section {
+    height: 1100px;
+    padding: 5% 1%;
+  }
+
+  .second-section > section {
+    width: 100%;
+  }
+
+  .second-section h4 {
+    font-size: 1.3rem;
+  }
+  .second-section p {
+    font-size: 1.1rem;
+    padding: 5px 10px;
+  }
+  .placeholder {
+    width: 60%;
+    height: 200px;
+  }
+
+  section.volunteer-section {
+    height: 400px;
+    padding: 5% 5%;
+  }
+  section.volunteer-section h3 {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+  section.volunteer-section p {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  .volunteer-section .text-button {
+    width: 50%;
+  }
+} */
