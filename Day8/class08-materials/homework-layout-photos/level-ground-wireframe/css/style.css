@@ -33,13 +33,11 @@
 body {
   width: 80%;
   margin: 0 auto;
+  min-width: 400px;
 }
 body h1 {
   font-size: 50%;
 }
-/* body p {
-  font-size: 30%;
-} */
 
 /******************************************
 /* LAYOUT
@@ -54,7 +52,6 @@ header {
 nav {
   width: 40%;
   float: left;
-  /* background-color: rosybrown; */
   height: 100%;
 }
 header li {
@@ -66,6 +63,12 @@ nav a {
   color: white;
   font-size: 14px;
   font-weight: bold;
+}
+nav a:hover {
+  color: rgb(85, 107, 129, 0.95);
+  background-color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .logo-container {
@@ -96,6 +99,10 @@ a.button {
   margin: 5px 0;
   text-decoration: none;
 }
+a.button:hover {
+  color: whitesmoke;
+  background-color: rgba(49, 69, 88, 0.95);
+}
 
 /* Main */
 main {
@@ -105,7 +112,6 @@ main {
   color: white;
   text-align: center;
   padding: 5% 10%;
-  /* border: 2px solid black; */
   margin: 0;
 }
 main h1 {
@@ -124,6 +130,14 @@ main span {
   vertical-align: middle;
 }
 
+main > div a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+main > div a:hover {
+  color: orange;
+}
 /* Why section */
 section.why-section {
   height: 400px;
@@ -151,12 +165,11 @@ section.why-section p {
 
 .second-section > section {
   width: 50%;
-  height: 100%;
   float: left;
 }
 
 .placeholder {
-  width: 400px;
+  width: 70%;
   height: 250px;
   background-color: rgb(85, 107, 129, 0.95);
   margin: 20px auto;
@@ -185,8 +198,13 @@ section.why-section p {
   margin: 20px auto;
   text-align: center;
 }
+.text-button:hover {
+  color: whitesmoke;
+  background-color: rgb(85, 107, 129, 0.95);
+  border: 1px solid rgb(85, 107, 129);
+}
 
-/* Why section */
+/* volunteer section */
 section.volunteer-section {
   height: 600px;
   background-color: white;
@@ -230,6 +248,7 @@ section.footer-under {
 }
 section.footer-under h6 {
   margin-top: 10px;
+  width: 90%;
   float: left;
 }
 section.footer-under img {
@@ -241,7 +260,6 @@ section.footer-under img {
   color: grey;
   display: block;
   margin-top: 20px;
-  /* margin: 5px 20px; */
 }
 .left-footer li {
   color: rgb(187, 187, 187);
@@ -270,11 +288,8 @@ p {
 /* social media icons */
 .fa {
   padding: 3px 3px 0 7px;
-  /* font-size: 30px; */
-  /* width: 20px; */
   text-align: center;
   text-decoration: none;
-  /* margin: 5px 2px; */
 }
 
 .fa:hover {
@@ -287,10 +302,160 @@ p {
 }
 
 .fa-twitter {
-  /* background: white; */
   color: white;
 }
 .fa-envelope {
-  /* background: white; */
   color: white;
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  body {
+    width: 90%;
+  }
+  main h1 {
+    font-size: 3rem;
+  }
+  section.why-section {
+    padding: 5% 20%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  body {
+    width: 90%;
+  }
+  main h1 {
+    font-size: 2.2rem;
+  }
+  section.why-section {
+    padding: 5% 5%;
+  }
+  section.volunteer-section {
+    padding: 10% 5%;
+  }
+  .second-section {
+    padding: 5% 1%;
+  }
+  .placeholder {
+    width: 80%;
+  }
+  .second-section p {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  body {
+    width: 100%;
+  }
+  header {
+    padding: 0 10px;
+  }
+  header li {
+    margin: 10px 3px;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  /* Main */
+  main {
+    height: 400px;
+    padding: 5% 5%;
+  }
+  main h1 {
+    font-size: 2rem;
+  }
+  main p {
+    font-size: 16px;
+    padding: 2% 5%;
+  }
+  /* Why section */
+  section.why-section {
+    height: 300px;
+    padding: 5% 5%;
+  }
+  section.why-section h3 {
+    font-size: 2rem;
+  }
+  section.why-section p {
+    font-size: 1.1rem;
+  }
+  /* second-section */
+  .second-section {
+    height: 1100px;
+    padding: 5% 1%;
+  }
+
+  .second-section > section {
+    width: 100%;
+  }
+
+  .second-section h4 {
+    font-size: 1.3rem;
+  }
+  .second-section p {
+    font-size: 1.1rem;
+    padding: 5px 10px;
+  }
+  .placeholder {
+    width: 60%;
+    height: 200px;
+  }
+  /* volunteer section */
+  section.volunteer-section {
+    height: 400px;
+    padding: 5% 5%;
+  }
+  section.volunteer-section h3 {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+  section.volunteer-section p {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  .volunteer-section .text-button {
+    width: 50%;
+  }
+
+  /* footer */
+  footer {
+    height: 240px;
+    background-color: rgb(19, 29, 38);
+  }
+  footer section {
+    height: 150px;
+  }
+  section.footer-under {
+    width: 90%;
+    padding-top: 5px;
+  }
+  section.footer-under h6 {
+    margin-top: 5px;
+    width: 85%;
+    font-size: 0.6rem;
+  }
+  section.footer-under img {
+    padding-top: 5px;
+  }
+
+  .left-footer span {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+  .left-footer a {
+    font-size: 0.8rem;
+  }
+  .right-footer,
+  .left-footer {
+    padding: 10px;
+  }
+  .right-footer h6,
+  p {
+    font-size: 0.6rem;
+    margin: 5px 10px;
+  }
 }
