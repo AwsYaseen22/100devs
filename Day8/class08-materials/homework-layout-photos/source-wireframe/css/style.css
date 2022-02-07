@@ -30,14 +30,22 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
-  width: 100%;
-  min-width: 400px;
-  font-size: 100%;
+html {
+  font-size: 62.5%;
 }
-/* body h1 {
-  font-size: 50%;
-} */
+body {
+  width: 80%;
+  margin: 0 auto;
+  min-width: 400px;
+  --back-all: rgb(243, 248, 251);
+  --headline: rgb(40, 61, 79);
+  --text: rgb(56, 79, 97);
+  --text-reversed: rgb(243, 248, 251);
+  --button: rgb(40, 61, 79);
+  --button--reversed: rgb(220, 230, 238);
+  --textfield: rgb(220, 230, 238);
+  --placeholder: rgb(220, 230, 238);
+}
 
 /******************************************
 /* LAYOUT
@@ -45,10 +53,26 @@ body {
 
 /* Header */
 header {
-  height: 50px;
-  padding: 0 20px;
-  background-color: rgb(243, 248, 251);
+  height: 70px;
+  padding: 10px 20px;
+  background-color: var(--back-all);
 }
+
+.header-logo {
+  width: 20%;
+  height: 80%;
+  float: left;
+  padding-top: 5px;
+}
+.header-logo a {
+  display: none;
+}
+div.header-logo > img {
+  height: 100%;
+  display: block;
+  float: left;
+}
+
 nav {
   width: 60%;
   float: left;
@@ -60,32 +84,20 @@ nav ul {
 }
 header li {
   display: inline-block;
-  margin: 10px 20px;
+  margin: 15px 20px 0 0;
 }
 nav a {
-  background-color: red;
   text-decoration: none;
-  color: rgb(85, 107, 129, 0.95);
-  font-size: 1rem;
-  font-weight: bold;
+  color: var(--text);
+  font-size: 1.5rem;
+  padding: 5px 10px;
 }
 nav a:hover {
-  color: rgb(85, 107, 129, 0.95);
-  background-color: whitesmoke;
-  padding: 5px 10px;
+  background-color: var(--button);
+  color: var(--text-reversed);
   border-radius: 5px;
 }
 
-.header-logo {
-  width: 20%;
-  height: 100%;
-  float: left;
-}
-div.header-logo > img {
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-}
 .header-right {
   float: right;
   width: 20%;
@@ -94,194 +106,361 @@ div.header-logo > img {
   padding: 0;
 }
 a.button {
-  color: rgb(85, 107, 129, 0.95);
-  background-color: white;
-  padding: 10px 10px;
+  color: var(--text-reversed);
+  background-color: var(--button);
+  width: 100px;
+  padding: 8px 0;
   font-weight: bold;
-  font-size: 14px;
-  border-radius: 5px;
+  font-size: 1.3rem;
   float: right;
   margin: 5px 0;
   text-decoration: none;
+  text-align: center;
 }
 a.button:hover {
-  color: whitesmoke;
-  background-color: rgba(49, 69, 88, 0.95);
+  color: var(--text);
+  background-color: var(--button--reversed);
 }
 
 /* Main */
 main {
-  height: 500px;
-  background-color: rgb(85, 107, 129, 0.95);
+  height: 60vh;
+  background-color: var(--back-all);
   width: 100%;
-  color: white;
-  text-align: center;
-  /* padding: 5% 10%; */
   margin: 0;
 }
+.main-left,
+.main-right {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.main-left {
+  padding: 5% 10%;
+}
+.main-right {
+  padding: 3% 0;
+}
+.main-right img {
+  width: 90%;
+  float: right;
+}
 main h1 {
-  font-size: 3.5rem;
+  font-size: 4.2rem;
+  color: var(--headline);
 }
 main p {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.7rem;
   line-height: 1.5;
-  /* padding: 2% 10%; */
-  color: whitesmoke;
-  text-align: left;
+  color: var(--text);
+  margin-top: 30px;
+  padding-right: 10px;
 }
-
-/* Why section */
-section.grid-section {
+main form {
+  width: 100%;
+  height: 35px;
+}
+form input {
+  width: 75%;
+  float: left;
+  font-size: 1.4rem;
+  color: var(--text);
+  background-color: var(--textfield);
+  padding: 7px 10px;
+  margin: 5px 0;
+  height: 100%;
+}
+form a.button {
+  width: 25%;
+  float: left;
+  font-weight: normal;
+  height: 35px;
+}
+/* Grid section */
+.grid-section {
   height: 400px;
-  background-color: white;
-  padding: 5% 30%;
+  background-color: var(--back-all);
+  padding: 3% 10%;
 }
-section.grid-section h3 {
-  font-size: 2.5rem;
+.grid-section section {
+  width: 25%;
+  height: 100%;
+  float: left;
+  padding: 10px 20px 10px 0;
+}
+.grid-section h3 {
+  font-size: 2rem;
   text-align: left;
-  /* padding: 20px; */
+  padding: 15px 0;
+  color: var(--text);
 }
-section.grid-section p {
-  font-size: 1.3rem;
+.grid-section p {
+  font-size: 1.6rem;
   text-align: left;
   line-height: 1.5;
-  color: rgb(45, 45, 45);
+  color: var(--text);
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.grid-section span {
+  /* font-size: 2rem; */
+  /* padding-top: 5px; */
+  vertical-align: text-bottom;
+  /* float: right; */
+}
+.grid-section a {
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.grid-section a:hover {
+  color: var(--text);
+  background-color: var(--button--reversed);
+  padding: 5px 10px 5px 0;
 }
 
 /* second-section */
 .second-section {
-  height: 700px;
-  background-color: rgb(212, 219, 222);
-  padding: 7% 5%;
+  height: 500px;
+  background-color: white;
+  width: 100%;
+  padding: 5% 10%;
+}
+
+.second-section h4 {
+  font-size: 4.5rem;
+  color: var(--headline);
+  width: 50%;
+}
+.second-section p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin-top: 30px;
+  padding-right: 10px;
+  width: 50%;
 }
 
 .placeholder {
-  width: 70%;
-  height: 250px;
-  background-color: rgb(85, 107, 129, 0.95);
-  margin: 20px auto;
-}
-.second-section h4 {
-  font-size: 1.5rem;
-  text-align: left;
-  padding: 10px;
-}
-.second-section p {
-  font-size: 1.2rem;
-  text-align: left;
-  padding: 10px 50px;
-  color: rgb(45, 45, 45);
+  width: 100%;
+  height: 150px;
+  background-color: var(--placeholder);
+  margin: 40px 0;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-/* @media (min-width: 1200px) and (max-width: 1500px) {
-  main h1 {
-    font-size: 3rem;
-  }
-  section.grid-section {
-    padding: 5% 20%;
-  }
-} */
-
-/* @media (min-width: 900px) and (max-width: 1199px) {
-  body {
-    width: 90%;
-  }
-  main h1 {
-    font-size: 2.2rem;
-  }
-  section.grid-section {
-    padding: 5% 5%;
-  }
-  section.volunteer-section {
-    padding: 10% 5%;
-  }
-  .second-section {
-    padding: 5% 1%;
-  }
-  .placeholder {
-    width: 80%;
-  }
-  .second-section p {
-    padding: 10px 10px;
-  }
-} */
-
-/* @media screen and (max-width: 899px) {
+@media screen and (max-width: 1200px) {
   body {
     width: 100%;
   }
+}
+@media (min-width: 600px) and (max-width: 800px) {
   header {
-    padding: 0 10px;
+    padding: 10px 5px;
+  }
+  .header-logo {
+    width: 15%;
+  }
+  .header-right {
+    width: 15%;
+  }
+  nav {
+    width: 70%;
   }
   header li {
-    margin: 10px 3px;
+    margin: 15px 5px 0 0;
   }
   nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 5px 5px;
   }
-  main {
-    height: 400px;
-    padding: 5% 5%;
-  }
-  main h1 {
-    font-size: 2rem;
-  }
-  main p {
-    font-size: 16px;
-    padding: 2% 5%;
-  }
-  section.grid-section {
-    height: 300px;
-    padding: 5% 5%;
-  }
-  section.grid-section h3 {
-    font-size: 2rem;
-  }
-  section.grid-section p {
-    font-size: 1.1rem;
-  }
-  .second-section {
-    height: 1100px;
-    padding: 5% 1%;
+  .main-left h1 {
+    font-size: 4rem;
   }
 
-  .second-section > section {
+  .main-left p {
+    font-size: 1.5rem;
+  }
+
+  main {
+    height: 45vh;
+  }
+  .main-left {
+    padding: 5% 0 0 2%;
+    width: 60%;
+  }
+  .main-right {
+    padding: 5% 0;
+    width: 40%;
+  }
+  .main-right img {
+    width: 90%;
+    float: right;
+  }
+  main form {
+    width: 90%;
+    height: 35px;
+  }
+  /* Grid section */
+  .grid-section {
+    height: 600px;
+    padding: 3% 5%;
+  }
+  .grid-section section {
+    width: 50%;
+    height: 50%;
+  }
+  .second-section {
+    padding: 5% 5%;
+  }
+  .second-section h4 {
+    font-size: 4rem;
+    color: var(--headline);
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  /* Header */
+  header {
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--placeholder);
+  }
+
+  .header-logo {
     width: 100%;
+  }
+  .header-logo a {
+    display: inline;
+    float: left;
+  }
+  .header-logo span {
+    font-size: 3rem;
+    color: var(--text);
+    margin-right: -30px;
+  }
+  div.header-logo > img {
+    margin: 0 auto;
+    float: none;
+    display: block;
+  }
+
+  nav,
+  .header-right {
+    display: none;
+  }
+
+  /* Main */
+  main {
+    height: 90vh;
+  }
+  .main-left,
+  .main-right {
+    width: 100%;
+    float: none;
+  }
+  .main-left {
+    padding: 5% 5%;
+    height: 60%;
+  }
+  .main-right {
+    padding: 3% 0;
+    height: 40%;
+  }
+  .main-right img {
+    width: 80%;
+    float: right;
+  }
+  main h1 {
+    font-size: 4.2rem;
+  }
+  main p {
+    font-size: 2rem;
+    margin-top: 90px;
+    padding-right: 5px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  main form {
+    width: 100%;
+    height: 35px;
+  }
+  form input {
+    width: 100%;
+  }
+  form a.button {
+    width: 100%;
+    font-weight: bold;
+    height: 35px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-top: 10px;
+  }
+  /* Grid section */
+  .grid-section {
+    height: 800px;
+    padding: 3% 5%;
+  }
+  .grid-section section {
+    width: 100%;
+    height: 25%;
+    float: none;
+    padding: 30px 20px 10px 0;
+  }
+  .grid-section img {
+    width: 10%;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding: 12px 0;
+  }
+  .grid-section h3 {
+    width: 80%;
+    font-size: 3rem;
+    float: left;
+    font-weight: normal;
+  }
+  .grid-section p {
+    clear: both;
+    font-size: 1.7rem;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .grid-section a {
+    float: right;
+  }
+  .grid-section span {
+    font-size: 2rem;
+    /* padding-top: 5px; */
+    vertical-align: text-bottom;
+    float: right;
+  }
+
+  /* second-section */
+  .second-section {
+    height: 450px;
+    background-color: white;
+    width: 100%;
+    padding: 5% 5%;
   }
 
   .second-section h4 {
-    font-size: 1.3rem;
+    width: 100%;
+    font-size: 4rem;
   }
   .second-section p {
-    font-size: 1.1rem;
-    padding: 5px 10px;
-  }
-  .placeholder {
-    width: 60%;
-    height: 200px;
+    width: 100%;
   }
 
-  section.volunteer-section {
-    height: 400px;
-    padding: 5% 5%;
+  .placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: var(--placeholder);
+    margin: 40px 0;
   }
-  section.volunteer-section h3 {
-    font-size: 1.5rem;
-    padding: 5px;
-  }
-  section.volunteer-section p {
-    font-size: 1.1rem;
-    padding: 5px;
-  }
-  .volunteer-section .text-button {
-    width: 50%;
-  }
-} */
+}
