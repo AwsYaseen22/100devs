@@ -1,0 +1,471 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  /* font-family: "Varela Round", sans-serif; */
+}
+html {
+  font-size: 62.5%;
+}
+p {
+  line-height: 1.7;
+  /* font-size: 1.8rem; */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  /******************************************
+  /* COLORS
+  /*******************************************/
+  --dark: rgb(23, 28, 41);
+  --light: rgb(246, 246, 249);
+  --nav: rgb(116, 121, 130);
+  --image_light: rgb(217, 219, 230);
+  --image_dark: rgb(26, 32, 45);
+  --button_light_back: rgb(246, 246, 249);
+  --button_light_text: rgb(26, 32, 44);
+  --button_header_back: rgb(50, 57, 69);
+  --button_header_text: rgb(255, 255, 255);
+  --button_dark_back: rgb(25, 30, 42);
+  --button_dark_text: rgb(220, 223, 233);
+  width: 75%;
+  margin: 0 auto;
+  background-color: var(--light);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* header */
+header {
+  height: 100px;
+  padding: 45px 80px 0 80px;
+  background-color: var(--dark);
+}
+
+header img {
+  float: left;
+}
+header nav {
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--nav);
+  font-size: 1.3rem;
+}
+nav ul li:first-child a {
+  color: var(--light);
+}
+nav ul li a:hover {
+  color: var(--light);
+}
+
+/* nav button */
+nav ul li:last-child a {
+  padding: 15px 35px;
+  background-color: var(--button_header_back);
+  color: var(--button_header_text);
+  border-radius: 5px;
+}
+nav ul li:last-child a:hover {
+  color: var(--button_header_back);
+  background-color: var(--button_header_text);
+}
+
+/* Main */
+main {
+  height: 700px;
+  /* border: 1px solid grey; */
+  background: url(../images/push_background.png) no-repeat;
+  background-size: 100%;
+}
+.main_left {
+  width: 50%;
+  height: 80%;
+  float: left;
+  /* border: 1px solid yellow; */
+  padding: 80px;
+  color: var(--light);
+}
+
+.main_left h1 {
+  font-size: 3.5rem;
+  padding-right: 80px;
+}
+.main_left p {
+  font-size: 1.8rem;
+}
+
+.material-icons-outlined {
+  /* margin: 0;
+  padding: 0; */
+  font-size: 2rem;
+  vertical-align: text-bottom;
+}
+.main_left div {
+  padding-top: 60px;
+  font-size: 1.4rem;
+}
+.button-light {
+  text-decoration: none;
+  /* width: 50%; */
+  padding: 15px 40px;
+  background-color: var(--button_light_back);
+  color: var(--button_light_text);
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.button-dark {
+  text-decoration: none;
+  /* width: 50%; */
+  padding: 15px 40px;
+  background-color: var(--button_dark_back);
+  color: var(--button_dark_text);
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.button-light:hover {
+  color: var(--button_light_back);
+  background-color: var(--button_light_text);
+}
+.button-dark:hover {
+  color: var(--button_dark_back);
+  background-color: var(--button_dark_text);
+}
+.main_left a:last-child {
+  margin-left: 20px;
+}
+
+.main_right {
+  width: 50%;
+  height: 80%;
+  float: left;
+  /* border: 1px solid yellow; */
+  padding: 80px;
+}
+.main_right > section {
+  background-color: var(--light);
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  padding: 20px 40px;
+  box-shadow: 1px 1px 10px 0px rgb(195, 195, 195);
+}
+.main_right section section {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  background: url(../images/image_100_dark.png) no-repeat 50% 50%
+    var(--image_light);
+}
+.main_links {
+  width: 100%;
+  height: 20%;
+  float: left;
+  /* border: 1px solid yellow; */
+  /* background-color: var(--light); */
+  font-size: 3rem;
+  color: grey;
+  padding: 40px 80px;
+}
+.main_links img {
+  float: right;
+  margin: 0 20px;
+}
+
+/* second */
+.second_sec {
+  height: 700px;
+}
+.second_left {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid green; */
+  float: left;
+  padding: 80px;
+}
+
+.second_left h2 {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.second_left h3 {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.second_left p {
+  font-size: 1.7rem;
+}
+.second_left p + p {
+  padding-bottom: 100px;
+}
+
+.second_right {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid green; */
+  float: left;
+  padding: 1% 6%;
+}
+
+.second_right section {
+  width: 50%;
+  height: 50%;
+  float: left;
+  /* border: 1px solid blueviolet; */
+  padding: 2%;
+}
+.second_right section section {
+  box-shadow: 1px 1px 10px 0px rgb(195, 195, 195);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  /* background-color: red; */
+  border-radius: 5px;
+}
+.second_right section section div {
+  width: 100%;
+  height: 70%;
+  border-radius: 5px 5px 0 0;
+  padding: 0;
+  margin: 0;
+  background: url(../images/image_100_light.png) no-repeat 50% 50%
+    var(--image_light);
+}
+.second_right section:first-child section div {
+  background: url(../images/image_100_dark.png) no-repeat 50% 50% var(--dark);
+}
+
+.second_right h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+.second_right p {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0 1%;
+}
+
+/* third */
+.third_sec {
+  height: 700px;
+  /* background-color: beige; */
+  /* border: 1px solid grey; */
+  padding: 120px 80px;
+}
+.third_left {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid green; */
+  float: left;
+  padding-right: 80px;
+}
+.third_left section {
+  height: 100%;
+  width: 100%;
+  background: url(../images/image_place_dark.png) 50% 50% no-repeat
+    var(--image_light);
+  border-radius: 8px;
+}
+.third_right {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid green; */
+  float: left;
+  padding: 0 40px;
+}
+
+.third_right h2 {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.third_right h3 {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-right: 150px;
+}
+.third_right p {
+  font-size: 1.7rem;
+}
+.third_right p + p {
+  padding-bottom: 50px;
+}
+
+/* fourth */
+.fourth_sec {
+  height: 900px;
+  background-color: crimson;
+  border: 1px solid grey;
+}
+.how_it_work {
+  width: 100%;
+  border: 1px solid yellow;
+  height: 20%;
+  float: left;
+}
+.fourth_left {
+  width: 50%;
+  border: 1px solid yellow;
+  height: 60%;
+  float: left;
+}
+.fourth_right {
+  width: 50%;
+  border: 1px solid yellow;
+  height: 60%;
+  float: left;
+}
+.fourth_link {
+  width: 100%;
+  border: 1px solid yellow;
+  height: 20%;
+  float: left;
+}
+
+/* fifth */
+.fifth_sec {
+  height: 800px;
+  background-color: aquamarine;
+  border: 1px solid grey;
+}
+.fifth_title {
+  height: 25%;
+  width: 100%;
+  border: 1px solid green;
+}
+.fifth_grid {
+  height: 75%;
+  width: 100%;
+  border: 1px solid yellow;
+}
+
+/* sixth */
+.sixth_sec {
+  height: 600px;
+  background-color: azure;
+  border: 1px solid grey;
+}
+.sixth_left {
+  width: 50%;
+  border: 1px solid yellow;
+  height: 100%;
+  float: left;
+}
+.sixth_right {
+  width: 50%;
+  border: 1px solid yellow;
+  height: 100%;
+  float: left;
+}
+
+/* testomonial */
+.testomonial_sec {
+  height: 500px;
+  background-color: white;
+  border: 1px solid grey;
+}
+.testomonial_left {
+  height: 100%;
+  width: 10%;
+  float: left;
+  border: 1px solid orange;
+}
+.testomonial_center {
+  height: 100%;
+  width: 80%;
+  float: left;
+  border: 1px solid orange;
+}
+.testomonial_right {
+  height: 100%;
+  width: 10%;
+  float: left;
+  border: 1px solid orange;
+}
+
+/* contact */
+.contact {
+  height: 200px;
+  background-color: var(--dark);
+  border: 1px solid grey;
+}
+
+.contact_left {
+  width: 50%;
+  border: 1px solid pink;
+  height: 100%;
+  float: left;
+}
+.contact_right {
+  width: 50%;
+  border: 1px solid pink;
+  height: 100%;
+  float: left;
+}
+
+footer {
+  height: 400px;
+  background-color: var(--light);
+  border: 1px solid grey;
+}
+.footer1 {
+  width: 25%;
+  height: 100%;
+  float: left;
+  border: 1px solid tomato;
+}
+.footer2 {
+  width: 30%;
+  height: 100%;
+  float: left;
+  border: 1px solid tomato;
+}
+
+.footer3,
+.footer4,
+.footer5 {
+  width: 15%;
+  height: 100%;
+  float: left;
+  border: 1px solid tomato;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
