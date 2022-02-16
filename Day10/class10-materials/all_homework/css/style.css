@@ -1,0 +1,57 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+main {
+  height: 50vh;
+  width: 100%;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  margin: 25vh 0;
+  padding: 5%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1 {
+  color: tomato;
+}
+
+.btn {
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: tomato;
+  color: antiquewhite;
+  font-size: 22px;
+  text-decoration: none;
+  float: left;
+  margin: 20px 40px 20px 0;
+}
