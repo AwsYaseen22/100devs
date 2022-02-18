@@ -1,0 +1,195 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  padding: 0 15%;
+}
+.header-left ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  display: block;
+  height: 100%;
+  float: left;
+}
+
+.header-left {
+  width: 30%;
+  height: 100%;
+  /* background-color: aqua; */
+  float: left;
+  padding: 5px 0;
+}
+select {
+  margin: 0;
+  background-color: white;
+  color: blue;
+  height: 40px;
+  border: none;
+  font-size: 1.5rem;
+  width: 100px;
+  margin-right: 20px;
+}
+
+header input {
+  height: 40px;
+  font-size: 1.5rem;
+  padding: 5px;
+
+  background: url(https://cdn.glitch.global/3c3b264a-8d59-414d-b4df-677b946f7e7d/outline_search_black_24dp.png?v=1645212686223)
+    no-repeat;
+  background-color: rgb(238, 239, 240);
+  color: blue;
+  border: none;
+  border-radius: 5px;
+  background-size: 13%;
+  background-position: right;
+  padding-right: 30px;
+}
+
+.logo-container {
+  width: 40%;
+  height: 100%;
+  /* background-color: bisque; */
+  float: left;
+}
+.logo-container img {
+  height: 40px;
+  width: auto;
+  display: block;
+  margin: 5px auto;
+}
+
+.header-right {
+  width: 30%;
+  height: 100%;
+  /* background-color: blueviolet; */
+  float: left;
+}
+
+nav {
+  float: right;
+}
+nav li {
+  display: block;
+  /* height: 100%; */
+  padding: 7px 15px 0 15px;
+  margin: 0;
+  /* border-left: 1px solid rgb(154, 154, 154); */
+  float: left;
+}
+nav a {
+  /* height: 40px; */
+  text-decoration: none;
+  color: blue;
+  width: auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main {
+  width: 80%;
+  height: 70vh;
+  margin: 0 auto;
+  /* background-color: antiquewhite; */
+}
+
+.main-left {
+  width: 50%;
+  height: 100%;
+  padding: 5%;
+  /* background-color: lightblue; */
+  float: left;
+}
+
+.main-left img {
+  width: 100%;
+  /* width: auto; */
+  display: block;
+  margin: 0 auto;
+}
+
+.main-right {
+  width: 50%;
+  height: 100%;
+  padding: 10% 0;
+  padding-right: 10%;
+  /* background-color: lightblue; */
+  float: left;
+}
+
+.main-right h1 {
+  font-size: 5rem;
+}
+.main-right p {
+  font-family: "Varela Round", sans-serif;
+  font-size: 2rem;
+}
+
+.main-right ul {
+  background-color: red;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.main-right a {
+  font-size: 1.5rem;
+  font-family: "Varela Round", sans-serif;
+  padding: 10px 20px;
+  margin: 0 10px 0 0;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.sub-main {
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(246, 243, 242);
+}
+
+.sub-main h2 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 50px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
