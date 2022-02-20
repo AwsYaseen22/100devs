@@ -1,3 +1,5 @@
+// the tasks of the variables section of the book: https://javascript.info/variables
+
 // Read: https://javascript.info/variables + Tasks
 
 // Working with variables
