@@ -1,0 +1,85 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  margin: 50px auto;
+  background-color: azure;
+  font-family: "Sacramento", cursive;
+  font-size: 25px;
+  line-height: 75px;
+}
+section {
+  width: 640px;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: tomato;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  margin: 0;
+}
+ul.nums {
+  flex-basis: 400px;
+}
+ul.operations {
+  flex-basis: 240px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+  font-size: 55px;
+}
+ul.equal {
+  flex-basis: 520px;
+  justify-content: flex-end;
+  display: flex;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 75px;
+  background-color: beige;
+  border-radius: 30%;
+  padding-top: 10px;
+  cursor: pointer;
+}
+#result {
+  background-color: tomato;
+  flex-basis: 640px;
+  margin: 0;
+  padding: 5% 8%;
+}
+#result h1 {
+  background-color: beige;
+  width: 500px;
+  margin: 0;
+  padding: 5px 0 0 20px;
+  height: 90%;
+  border-radius: 20px;
+  column-count: 3;
+  overflow: hidden;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
