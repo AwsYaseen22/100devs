@@ -64,7 +64,7 @@ li {
   width: 30%;
   height: 100%;
   /* background-color: green; */
-  border-left: 3px solid orange;
+  border-left: 1px solid orange;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -72,9 +72,14 @@ li {
 }
 
 #restart {
-  /* display: inline; */
-  background-color: orange;
-  /* max-width: 150px; */
+  background-color: tomato;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+#continue {
+  background-color: rgb(41, 182, 41);
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -83,4 +88,25 @@ li {
 
 .hidden {
   display: none !important;
+}
+
+.score {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(38, 38, 130);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#p1Score,
+#p2Score {
+  font-size: 18px;
+  color: yellowgreen;
+  margin-left: 5px;
+}
+
+.winLine {
+  background: url("../img/winner.gif") rgb(35, 167, 35) no-repeat;
+  background-position: center;
+  background-size: 130%;
 }
