@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="This is where your description goes">
+		<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>tic_tac_toe</title>
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<section class="container">
+			<section class="grid">
+				<ul id="first">
+					<li id="A0"></li>
+					<li id="A1"></li>
+					<li id="A2"></li>
+				</ul>
+				<ul id="second">
+					<li id="B0"></li>
+					<li id="B1"></li>
+					<li id="B2"></li>
+				</ul>
+				<ul id="third">
+					<li id="C0"></li>
+					<li id="C1"></li>
+					<li id="C2"></li>
+				</ul>
+			</section>
+			<section class="details">
+				<!-- <h3>Player1: <span id="p1Score"></span></h3> -->
+				<!-- <h3>Player2: <span id="p2Score"></span></h3> -->
+				<h3 id="currPlayerTitle">Current Player:
+					<br>
+					<br>
+					<span id="currPlayer"></span>
+				</h3>
+
+				<h1 id="winner" class="hidden"></h1>
+				<h3 id="restart" class="hidden">Restart</h3>
+			</section>
+		</section>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+
+</html>
