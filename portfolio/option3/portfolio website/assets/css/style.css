@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap"); */
 
 :root {
   --yellow: #f9ca24;
@@ -53,7 +53,7 @@ section {
 .btn {
   padding: 0.7rem 3rem;
   background: #333;
-  color: #fff;
+  color: var(--yellow);
   cursor: pointer;
   margin-top: 1rem;
   font-size: 3rem;
@@ -64,6 +64,11 @@ section {
   border-bottom-left-radius: 15px 255px;
   border: 1px solid var(--yellow);
   transform: skewX(-2deg);
+  /* for hover */
+  background: linear-gradient(to bottom, var(--yellow) 50%, black 50%);
+  background-size: 100% 200%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
 }
 
 .btn i {
@@ -73,7 +78,9 @@ section {
 
 .btn:hover {
   /* background: var(--yellow); */
-  border: 3px solid var(--yellow);
+  /* border: 3px solid var(--yellow); */
+  background-position: left top;
+  color: black;
 }
 
 .heading {
@@ -142,6 +149,7 @@ header .navbar ul li a {
   padding: 1rem;
   margin: 2.5rem 0;
   background: transparent;
+  /* color: var(--yellow); */
   color: var(--yellow);
   font-size: 3rem;
   /* border-radius: 5rem; */
@@ -154,11 +162,18 @@ header .navbar ul li a {
   border-bottom-left-radius: 15px 255px;
   border: 1px solid var(--yellow);
   transform: skewX(-3deg);
+
+  /* hover effecgt */
+  background: linear-gradient(to right, var(--yellow) 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
 }
 
 header .navbar ul li a:hover {
-  border: 3px solid var(--yellow);
   transform: skewX(0deg);
+  background-position: left bottom;
+  color: black;
 }
 
 #menu {
@@ -210,7 +225,7 @@ header .navbar ul li a:hover {
   padding: 1rem 0;
 }
 .home a i {
-  color: var(--yellow);
+  color: inherit;
   transform: rotate(5deg);
 }
 
@@ -251,10 +266,16 @@ header .navbar ul li a:hover {
 
 .about .row .logoes .box {
   width: 20rem;
-  background: #222;
+  /* background: #222; */
   text-align: center;
   padding: 2rem;
   margin: 2rem;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  border: 1px solid var(--yellow);
+  transform: skewX(-2deg);
 }
 
 .about .row .logoes .box span {
