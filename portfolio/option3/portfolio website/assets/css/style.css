@@ -5,8 +5,8 @@
 }
 
 * {
-  /* font-family: "Nunito", sans-serif; */
   font-family: "Handlee", cursive;
+  /* font-family: "Bilbo", cursive; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -494,4 +494,7 @@ header .navbar ul li a:hover {
   .contact .row form {
     margin: 3rem 0;
   }
+}
+.hidden {
+  visibility: hidden;
 }

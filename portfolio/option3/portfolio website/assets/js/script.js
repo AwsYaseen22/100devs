@@ -19,7 +19,6 @@ if (document.readyState === "complete" || document.readyState !== "loading") {
     document.querySelectorAll('a[href*="#"]').forEach(function (el) {
       el.addEventListener("click", function (e) {
         e.preventDefault();
-
         // use the jquery animate function
         $("html, body").animate(
           {

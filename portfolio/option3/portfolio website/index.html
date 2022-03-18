@@ -4,7 +4,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#f9ca24" />
+		<meta name="description" content="Aws Yaseen's portfolio will updated monthly with a simple design.">
 		<title>Aws's portfolio</title>
+		<link rel="shortcut icon" href="./images/favicon.ico">
 
 		<!-- font awesome link  -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -13,6 +16,11 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+		<!-- google font 2 -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bilbo&display=swap" rel="stylesheet"> -->
 
 		<!-- css link  -->
 		<link rel="stylesheet" href="assets/css/style.css">
@@ -26,7 +34,7 @@
 		<header>
 
 			<div class="user">
-				<img src="images/avatar.jpg" alt="">
+				<img src="images/avatar.jpg" alt="aws's avatar">
 				<h3 class="name">Aws Yaseen</h3>
 				<p class="post">Full stack <br>software engineer</p>
 			</div>
@@ -68,16 +76,19 @@
 				<div class="info">
 
 					<h3> <span><i class="fas fa-code"></i></span> My name is Aws Yaseen.</h3>
-					<h3> <span><i class="fas fa-code"></i></span> I'm a software engineer, Focus on full stack web development
+					<h3> <span><i class="fas fa-code"></i></span> I'm a software engineer, Focus on full stack web
+						development
 					</h3>
 					<h3> <span><i class="fas fa-code"></i></span> I like to solve problems by downsizing the big ones to
 						small
 						portions that
 						make them solvable. I have the passion about building excellent Websites that
 						improves client's work.</h3>
-					<h3> <span><i class="fas fa-code"></i></span> I speak Arabic, English, HTMl5, CSS3 and JavaScript (So far,
+					<h3> <span><i class="fas fa-code"></i></span> I speak Arabic, English, HTMl5, CSS3 and JavaScript
+						(So far,
 						March 2022).</h3>
-					<h3> <span><i class="fas fa-code"></i></span> I'm from Iraq, Baghdad. living in Jordan, Amman since 2006.</h3>
+					<h3> <span><i class="fas fa-code"></i></span> I'm from Iraq, Baghdad. living in Jordan, Amman since
+						2006.</h3>
 
 					<h3> <span><i class="fas fa-code"></i></span> Ready to work remotly all over the world.</h3>
 				</div>
@@ -117,7 +128,7 @@
 
 				<a href="./sites/cuisine_restaurant/index.html" alt="restaurant web page" target="_blank">
 					<div class="box" id="restaurant">
-						<img src="images/restaurant.png" alt="">
+						<img src="images/restaurant.png" alt="restaurant web page preview">
 						<h3>Restaurant</h3>
 						<p>Fresh design, with multiple sections, including rating and testimonial, full responsive</p>
 					</div>
@@ -125,7 +136,7 @@
 
 				<a href="./sites/hair_salon/index.html" alt="hair salon web page" target="_blank">
 					<div class="box" id="salon">
-						<img src="images/salon.png" alt="">
+						<img src="images/salon.png" alt="hair salon web page preview">
 						<h3>Hair salon</h3>
 						<p>Modern design, strait to the point, including useful salon details, full responsive</p>
 					</div>
@@ -133,9 +144,10 @@
 
 				<a href="./sites/source-wireframe/index.html" alt="source web page" target="_blank">
 					<div class="box" id="source">
-						<img src="images/source.png" alt="">
+						<img src="images/source.png" alt="nice template web page preview">
 						<h3>Template</h3>
-						<p>Modern and simple template design, multiple sections, fit for many business categories, full responsive
+						<p>Modern and simple template design, multiple sections, fit for many business categories, full
+							responsive
 						</p>
 					</div>
 				</a>
@@ -158,22 +170,29 @@
 					<h3 class="title">Contact info</h3>
 
 					<div class="info">
-						<p>You are most welcome any time to discuss your brand and work success by arrange a meeting to fulfil your
+						<p>You are most welcome any time to discuss your brand and work success by arrange a meeting to
+							fulfil your
 							desired web page.</p>
 						<h3> <i class="fas fa-envelope"></i> aws.yaseen.22@gmail.com </h3>
-						<h3> <i class="fab fa-twitter"></i><a href="https://twitter.com/awsyaseen22" target="_blank"> @AwsYaseen22
+						<h3> <i class="fab fa-twitter"></i><a href="https://twitter.com/awsyaseen22" target="_blank">
+								@AwsYaseen22
 							</a></h3>
 						<h3> <i class="fas fa-map-marker-alt"></i> Amman, Jordan </h3>
 					</div>
 
 				</div>
 
-				<form action="">
-
-					<input type="text" placeholder="name" class="box">
-					<input type="email" placeholder="email" class="box">
-					<input type="text" placeholder="project" class="box">
-					<textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+				<form name="contact" method="POST" data-netlify="true">
+					<p class="hidden">
+						<label>
+							Don’t fill this out if you’re human: <input name="bot-field" />
+						</label>
+					</p>
+					<input type="text" placeholder="name" class="box" name="name">
+					<input type="email" placeholder="email" class="box" name="email">
+					<input type="text" placeholder="project" class="box" name="project">
+					<textarea id="" cols="30" rows="10" class="box message" placeholder="message"
+						name="message"></textarea>
 					<button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i> </button>
 
 				</form>
@@ -200,6 +219,7 @@
 
 
 		<!-- jquery cdn link  -->
+		<!-- used for the animation of the page smooth scroll -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 		<!-- custom js file link  -->
