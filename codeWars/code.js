@@ -247,4 +247,170 @@ function rentalCarCost(d) {
   }
 }
 
-console.log(rentalCarCost(10));
+// console.log(rentalCarCost(10));
+
+// ##################################################
+
+// Total amount of points
+function points(games) {
+  let result = 0;
+  games.forEach((game) => {
+    let scores = game.split(":");
+    if (scores[0] > scores[1]) {
+      result += 3;
+    } else if (scores[0] === scores[1]) {
+      result += 1;
+    }
+  });
+  return result;
+}
+
+// console.log(
+//   points(["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"])
+//   );
+
+// ##################################################
+
+// Sentence Smash
+
+function smash(words) {
+  return words.join(" ");
+}
+
+// console.log(smash(['hello', 'world']));
+
+// ##################################################
+
+// How good are you really?
+
+function betterThanAverage(classPoints, yourPoints) {
+  let avarage =
+    classPoints.concat(yourPoints).reduce((a, c) => a + c, 0) /
+    (classPoints.length + 1);
+
+  return yourPoints > avarage ? true : false;
+}
+
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 69));
+
+// ##################################################
+
+// Area or Perimeter
+
+const areaOrPerimeter = function (l, w) {
+  return l === w ? l * w : 2 * l + 2 * w;
+};
+// console.log(areaOrPerimeter(6, 10));
+
+// ##################################################
+
+// Count by X
+
+function countBy(x, n) {
+  let z = [];
+  for (let i = 1; i <= n; i++) {
+    z.push(i * x);
+  }
+  return z;
+}
+
+// console.log(countBy(1, 10));
+
+// ##################################################
+
+// Grasshopper - Personalized Message
+
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
+}
+
+// console.log(greet("Greg", "Daniel"));
+
+// ##################################################
+
+// Quarter of the year
+
+const quarterOf = (month) => {
+  // 1,2,3      1
+  // 4,5,6      2
+  // 7,8,9      3
+  // 10,11,12   4
+  return Math.ceil((4 * month) / 12);
+};
+// console.log(quarterOf(4));
+
+// ##################################################
+
+// Get Planet Name By ID
+
+function getPlanetName(id) {
+  var name;
+  switch (id) {
+    case 1:
+      name = "Mercury";
+      break;
+    case 2:
+      name = "Venus";
+      break;
+    case 3:
+      name = "Earth";
+      break;
+    case 4:
+      name = "Mars";
+      break;
+    case 5:
+      name = "Jupiter";
+      break;
+    case 6:
+      name = "Saturn";
+      break;
+    case 7:
+      name = "Uranus";
+      break;
+    case 8:
+      name = "Neptune";
+      break;
+  }
+
+  return name;
+}
+
+// ##################################################
+
+// Can we divide it?
+function isDivideBy(number, a, b) {
+  return number % a === 0 && number % b === 0;
+}
+
+// console.log(isDivideBy(-12, 2, -6));
+
+// ##################################################
+
+// Convert a string to an array
+
+function stringToArray(string) {
+  return string.split(" ");
+}
+
+// console.log(stringToArray("Robin Singh"));
+
+// ##################################################
+
+//Third Angle of a Triangle
+
+function otherAngle(a, b) {
+  return 180 - (a + b);
+}
+
+console.log(otherAngle(30, 60));
+
+// ##################################################
+
+// Remove exclamation marks
+
+function removeExclamationMarks(s) {
+  let arr = s.split("");
+  return arr.filter((x) => x !== "!").join("");
+}
+
+console.log(removeExclamationMarks("Hello World!"));
