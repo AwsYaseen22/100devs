@@ -402,15 +402,137 @@ function otherAngle(a, b) {
   return 180 - (a + b);
 }
 
-console.log(otherAngle(30, 60));
+// console.log(otherAngle(30, 60));
 
 // ##################################################
 
 // Remove exclamation marks
 
 function removeExclamationMarks(s) {
-  let arr = s.split("");
-  return arr.filter((x) => x !== "!").join("");
+  return s
+    .split("")
+    .filter((x) => x !== "!")
+    .join("");
 }
 
-console.log(removeExclamationMarks("Hello World!"));
+// console.log(removeExclamationMarks("Hello World!"));
+
+// ##################################################
+// Beginner Series #4 Cockroach
+
+function cockroachSpeed(s) {
+  return Math.floor((s * 100000) / 3600);
+}
+
+// console.log(cockroachSpeed(1.08));
+
+// ##################################################
+//If you can't sleep, just count sheep!!
+
+var countSheep = function (num) {
+  let result = "";
+  for (let i = 1; i <= num; i++) {
+    result += `${i} sheep...`;
+  }
+  return result;
+};
+// console.log(countSheep(2));
+
+// ##################################################
+// Grasshopper - Grade book
+
+// use switch with multi compare
+function getGrade(s1, s2, s3) {
+  let av = (s1 + s2 + s3) / 3;
+  switch (true) {
+    case av >= 90 && av <= 100:
+      return "A";
+    case av >= 80 && av <= 90:
+      return "B";
+    case av >= 70 && av <= 80:
+      return "C";
+    case av >= 60 && av <= 70:
+      return "D";
+    case av >= 0 && av <= 60:
+      return "F";
+  }
+}
+
+// console.log(getGrade(95, 90, 93));
+
+// ##################################################
+//Grasshopper - Messi Goals
+
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+// ##################################################
+// Rock Paper Scissors!
+
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    return "Draw!";
+  } else if (p1 === "rock") {
+    return p2 === "scissors" ? "Player 1 won!" : "Player 2 won!";
+  } else if (p1 === "paper") {
+    return p2 === "rock" ? "Player 1 won!" : "Player 2 won!";
+  } else if (p1 === "scissors") {
+    return p2 === "paper" ? "Player 1 won!" : "Player 2 won!";
+  }
+};
+// console.log(rps("scissors", "rock"));
+
+// ##################################################
+// L1: Set Alarm
+
+function setAlarm(employed, vacation) {
+  return employed && !vacation;
+}
+// console.log(setAlarm(false, false));
+
+// ##################################################
+// Twice as old
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - sonYearsOld * 2);
+}
+
+// console.log(twiceAsOld(55, 30));
+
+// ##################################################
+// Grasshopper - Messi goals function
+
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+// ##################################################
+// Double Char
+
+function doubleChar(str) {
+  return str
+    .split("")
+    .map((s) => s + s)
+    .join("");
+}
+
+// console.log(doubleChar("Aws"));
+
+// ##################################################
+// Will there be enough space?
+
+function enough(cap, on, wait) {
+  return cap - on - wait > 0 ? 0 : Math.abs(cap - on - wait);
+}
+
+// ##################################################
+// The Feast of Many Beasts
+
+function feast(beast, dish) {
+  return beast[0] + beast[beast.length - 1] === dish[0] + dish[dish.length - 1];
+}
+// console.log(feast("great blue heron", "garlic naan"));
+// ##################################################
