@@ -536,3 +536,89 @@ function feast(beast, dish) {
 }
 // console.log(feast("great blue heron", "garlic naan"));
 // ##################################################
+
+// Expressions Matter
+function expressionMatter(a, b, c) {
+  // highest achievable result
+  // use multiplication
+  let multi = a * b * c;
+  let multi1 = a * b + c;
+  let multi2 = a + b * c;
+  // use the addition
+  let addition1 = (a + b) * c;
+  let addition2 = a * (b + c);
+  let addition3 = a + b + c;
+
+  return Math.max(multi, multi1, multi2, addition1, addition2, addition3);
+}
+
+// console.log(expressionMatter(1, 2, 3));
+
+// ##################################################
+// Switch it Up!
+function switchItUp(number) {
+  switch (number) {
+    case 0:
+      return "Zero";
+    case 1:
+      return "One";
+    case 2:
+      return "Two";
+    case 3:
+      return "Three";
+    case 4:
+      return "Four";
+    case 5:
+      return "Five";
+    case 6:
+      return "Six";
+    case 7:
+      return "Seven";
+    case 8:
+      return "Eight";
+    case 9:
+      return "Nine";
+  }
+}
+
+// ##################################################
+// altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+
+String.prototype.toAlternatingCase = function () {
+  // how to reach the text is by using the this keyword
+
+  const result = this.split("").map((l) => {
+    if (l.codePointAt() >= 65 && l.codePointAt() <= 90) {
+      return l.toLowerCase();
+    }
+    if (l.codePointAt() >= 97 && l.codePointAt() <= 122) {
+      return l.toUpperCase();
+    } else {
+      return l;
+    }
+  });
+  return result.join("");
+};
+
+console.log("hello World11".toAlternatingCase());
+
+// ##################################################
+// Function 2 - squaring an argument
+function square(n) {
+  return n ** 2;
+}
+
+// ##################################################
+// Unfinished Loop - Bug Fixing #1
+
+function createArray(number) {
+  var newArray = [];
+
+  for (var counter = 1; counter <= number; counter++) {
+    newArray.push(counter);
+  }
+
+  return newArray;
+}
+
+// ##################################################
