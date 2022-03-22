@@ -600,7 +600,7 @@ String.prototype.toAlternatingCase = function () {
   return result.join("");
 };
 
-console.log("hello World11".toAlternatingCase());
+// console.log("hello World11".toAlternatingCase());
 
 // ##################################################
 // Function 2 - squaring an argument
@@ -619,6 +619,383 @@ function createArray(number) {
   }
 
   return newArray;
+}
+
+// ##################################################
+// Parse nice int from char problem
+
+function getAge(inputString) {
+  return Number(inputString[0]);
+}
+
+// ##################################################
+// Keep up the hoop
+
+function hoopCount(n) {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
+}
+
+// ##################################################
+// Is the string uppercase?
+
+String.prototype.isUpperCase = function () {
+  const letters = this.split("");
+  for (l of letters) {
+    if (l.codePointAt() >= 97 && l.codePointAt() <= 122) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+// console.log("AWS".isUpperCase());
+
+// ##################################################
+// Welcome!
+
+const languages = {
+  english: "Welcome",
+  czech: "Vitejte",
+  danish: "Velkomst",
+  dutch: "Welkom",
+  estonian: "Tere tulemast",
+  finnish: "Tervetuloa",
+  flemish: "Welgekomen",
+  french: "Bienvenue",
+  german: "Willkommen",
+  irish: "Failte",
+  italian: "Benvenuto",
+  latvian: "Gaidits",
+  lithuanian: "Laukiamas",
+  polish: "Witamy",
+  spanish: "Bienvenido",
+  swedish: "Valkommen",
+  welsh: "Croeso",
+};
+
+function greet(language) {
+  return languages[language] ? languages[language] : languages["english"];
+}
+
+// console.log(greet("dutch"));
+
+// ##################################################
+
+// Removing Elements
+
+function removeEveryOther(arr) {
+  return arr.filter((e, i) => {
+    if (i % 2 === 0) {
+      return e;
+    }
+  });
+}
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// console.log(removeEveryOther(arr));
+
+// ##################################################
+
+// Simple Pig Latin (5 KYU)
+// score before 314
+// score after 323
+
+function pigIt(str) {
+  const arr = str.split(" ");
+  return arr
+    .map((e) => {
+      if (e.codePointAt() >= 65 && e.codePointAt() <= 122) {
+        let firstLetter = e[0];
+        let word = `${e.substring(1)}${firstLetter}ay`;
+        // console.log(word);
+        return word;
+      } else {
+        return e;
+      }
+    })
+    .join(" ");
+}
+
+// console.log(pigIt("Hello world !"));
+
+// ##################################################
+// Student's Final Grade
+
+function finalGrade(exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100;
+  } else if (exam > 75 && projects >= 5) {
+    return 90;
+  } else if (exam > 50 && projects >= 2) {
+    return 75;
+  } else {
+    return 0;
+  }
+}
+
+// ##################################################
+
+// Difference of Volumes of Cuboids
+
+function findDifference(a, b) {
+  return Math.abs(
+    a.reduce((acc, c) => acc * c, 1) - b.reduce((acc, c) => acc * c, 1)
+  );
+}
+
+// ##################################################
+
+// Correct the mistakes of the character recognition software
+
+function correct(string) {
+  let arr = string.split("");
+  return arr
+    .map((l) => {
+      if (l === "5") {
+        return "S";
+      } else if (l === "0") {
+        return "O";
+      } else if (l === "1") {
+        return "I";
+      } else {
+        return l;
+      }
+    })
+    .join("");
+}
+
+// console.log(correct("51NGAPORE"));
+
+// ##################################################
+
+// Sum The Strings
+function sumStr(a, b) {
+  return String(Number(a) + Number(b));
+}
+
+// ##################################################
+
+// Is it even?
+
+function testEven(n) {
+  return n % 2 === 0;
+}
+
+// ##################################################
+
+// Sort and Star
+/*
+twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"])
+'b***i***t***c***o***i***n'
+*/
+function twoSort(s) {
+  let firstWordArrayAfterSorted = s
+    .sort((a, b) => {
+      return a > b ? 1 : -1;
+    })[0]
+    .split("");
+  return firstWordArrayAfterSorted
+    .map((l, i) => {
+      return i < firstWordArrayAfterSorted.length - 1 ? l + "***" : l;
+    })
+    .join("");
+}
+// console.log(
+//   twoSort([
+//     "turns",
+//     "out",
+//     "random",
+//     "test",
+//     "cases",
+//     "are",
+//     "easier",
+//     "than",
+//     "writing",
+//     "out",
+//     "basic",
+//     "ones",
+//   ])
+// );
+
+// ##################################################
+
+// I love you, a little , a lot, passionately ... not at all
+function howMuchILoveYou(nbPetals) {
+  const phrases = [
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly",
+    "not at all",
+  ];
+
+  if (nbPetals <= 6) {
+    return phrases[nbPetals - 1];
+  } else {
+    let index = nbPetals % 6;
+    if (index === 0) {
+      index = 6;
+    }
+    console.log(index);
+    return phrases[index - 1];
+  }
+}
+
+// console.log(howMuchILoveYou(6));
+
+// ##################################################
+
+// All Star Code Challenge #18
+
+function strCount(str, letter) {
+  return str.split(letter).length - 1;
+}
+
+// console.log(strCount("Heolloo", "o"));
+
+// ##################################################
+
+// Regular Ball Super Ball
+
+var Ball = function (ballType) {
+  if (!ballType) {
+    this.ballType = "regular";
+  } else {
+    this.ballType = ballType;
+  }
+};
+
+// let ball1 = new Ball("");
+// let ball2 = new Ball("super");
+
+// console.log(ball1.ballType); //=> "regular"
+// console.log(ball2.ballType); //=> "super"
+
+// ##################################################
+// Grasshopper - Check for factor
+
+function checkForFactor(base, factor) {
+  return base % factor === 0;
+}
+
+// console.log(checkForFactor(10, 2));
+
+// ##################################################
+
+// Grasshopper - Debug sayHello
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+// ##################################################
+
+// Squash the bugs
+
+function findLongest(str) {
+  var spl = str.split(" ");
+  var longest = 0;
+
+  for (var i = 0; i < spl.length; i++) {
+    if (spl[i].length > longest) {
+      longest = spl[i].length;
+    }
+  }
+  return longest;
+}
+
+// ##################################################
+
+// N-th Power
+
+function index(array, n) {
+  if (n > array.length - 1) {
+    return -1;
+  } else {
+    return Math.pow(array[n], n);
+  }
+}
+
+// index([1, 2, 3, 4], 2);
+
+// ##################################################
+
+// Well of Ideas - Easy Version
+
+function well(x) {
+  let goodCounter = x.reduce((a, c) => (c === "good" ? a + 1 : a + 0), 0);
+  return goodCounter === 0
+    ? "Fail!"
+    : goodCounter > 2
+    ? "I smell a series!"
+    : "Publish!";
+}
+
+// console.log(well(["bad", "bad", "bad", "good"]));
+
+// ##################################################
+
+// Grasshopper - Terminal game move function
+
+function move(position, roll) {
+  return position + roll * 2;
+}
+
+// ##################################################
+
+// How many lightsabers do you own?
+
+function howManyLightsabersDoYouOwn(name) {
+  return name === "Zach" ? 18 : 0;
+}
+
+// ##################################################
+
+// Drink about
+
+function peopleWithAgeDrink(old) {
+  switch (true) {
+    case old >= 21:
+      return "drink whisky";
+    case old >= 18 && old < 21:
+      return "drink beer";
+    case old >= 14 && old <= 18:
+      return "drink coke";
+    case old < 14:
+      return "drink toddy";
+  }
+}
+
+// ##################################################
+
+// Filter out the geese
+
+function gooseFilter(birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  // return an array containing all of the strings in the input array except those that match strings in geese
+  return birds.filter((e) => !geese.includes(e));
+}
+console.log(
+  gooseFilter([
+    "Mallard",
+    "Hook Bill",
+    "African",
+    "Crested",
+    "Pilgrim",
+    "Toulouse",
+    "Blue Swedish",
+  ])
+);
+// ##################################################
+
+// What's the real floor?
+
+function getRealFloor(n) {
+  return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
 }
 
 // ##################################################
