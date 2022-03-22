@@ -979,17 +979,17 @@ function gooseFilter(birds) {
   // return an array containing all of the strings in the input array except those that match strings in geese
   return birds.filter((e) => !geese.includes(e));
 }
-console.log(
-  gooseFilter([
-    "Mallard",
-    "Hook Bill",
-    "African",
-    "Crested",
-    "Pilgrim",
-    "Toulouse",
-    "Blue Swedish",
-  ])
-);
+// console.log(
+//   gooseFilter([
+//     "Mallard",
+//     "Hook Bill",
+//     "African",
+//     "Crested",
+//     "Pilgrim",
+//     "Toulouse",
+//     "Blue Swedish",
+//   ])
+// );
 // ##################################################
 
 // What's the real floor?
@@ -997,5 +997,35 @@ console.log(
 function getRealFloor(n) {
   return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
 }
+
+// ##################################################
+
+// Multiplication table for number
+
+/*
+1 * 5 = 5\n2 * 5 = 10\n3 * 5 = 15\n4 * 5 = 20\n5 * 5 = 25\n6 * 5 = 30\n7 * 5 = 35\n8 * 5 = 40\n9 * 5 = 45\n10 * 5 = 50
+*/
+
+function multiTable(number) {
+  let result = "";
+  for (let i = 1; i <= 10; i++) {
+    if (i === 10) {
+      result += `${i} * ${number} = ${i * number}`;
+    } else {
+      result += `${i} * ${number} = ${i * number}\n`;
+    }
+  }
+  return result;
+}
+
+// console.log(multiTable(5));
+// ##################################################
+
+// Is it a palindrome?
+
+function isPalindrome(x) {
+  return x.toLowerCase().split("").reverse().join("") === x.toLowerCase();
+}
+console.log(isPalindrome("Abbas"));
 
 // ##################################################
