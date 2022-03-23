@@ -1040,7 +1040,7 @@ function between(a, b) {
   return result;
 }
 
-console.log(between(1, 4));
+// console.log(between(1, 4));
 
 // ##################################################
 
@@ -1061,5 +1061,90 @@ var humanYearsCatYearsDogYears = function (humanYears) {
   }
   return [humanYears, catYears, dogYears];
 };
+
+// ##################################################
+
+// Hello, Name or World!
+
+function hello(name) {
+  if (!name) {
+    return "Hello, World!";
+  }
+  return `Hello, ${name.slice(0, 1).toUpperCase()}${name
+    .slice(1)
+    .toLowerCase()}!`;
+}
+
+// ##################################################
+
+// Sum without highest and lowest number
+
+function sumArray(array) {
+  if (!array || array.length <= 1) {
+    return 0;
+  }
+  // use the three dots magic
+  let indexOfMax = array.indexOf(Math.max(...array));
+  array.splice(indexOfMax, 1);
+  let indexOfMin = array.indexOf(Math.min(...array));
+  array.splice(indexOfMin, 1);
+  return array.reduce((a, c) => a + c, 0);
+}
+
+// console.log(sumArray([3, 5]));
+
+// ##################################################
+
+// Sum Mixed Array
+
+function sumMix(x) {
+  return x.reduce((a, c) => a + Number(c), 0);
+}
+
+// ##################################################
+
+// Function 3 - multiplying two numbers
+
+function multiply(n1, n2) {
+  return n1 * n2;
+}
+
+// ##################################################
+
+// Find the first non-consecutive number
+
+function firstNonConsecutive(arr) {
+  if (!arr || arr.length <= 1) {
+    return 0;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i + 1] !== undefined) {
+      if (arr[i] + 1 !== arr[i + 1]) {
+        return arr[i + 1];
+      }
+    }
+  }
+  return 0;
+}
+
+// console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
+// console.log(firstNonConsecutive([-4, -2, -1, 0, 1, 2, 3, 4, 5]));
+// console.log(firstNonConsecutive([-5, -4, -3, -2, 0, 1, 2, 4]));
+// console.log(firstNonConsecutive([0]));
+
+// ##################################################
+
+// Thinkful - Logic Drills: Traffic light
+
+function updateLight(current) {
+  switch (current) {
+    case "green":
+      return "yellow";
+    case "yellow":
+      return "red";
+    case "red":
+      return "green";
+  }
+}
 
 // ##################################################
