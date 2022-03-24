@@ -1148,3 +1148,237 @@ function updateLight(current) {
 }
 
 // ##################################################
+
+// Reverse List Order
+
+function reverseList(list) {
+  return list.reverse();
+}
+
+// ##################################################
+
+// Holiday VIII - Duty Free
+
+function dutyFree(normPrice, discount, hol) {
+  return Math.floor(hol / (normPrice * (discount / 100)));
+}
+
+// console.log(dutyFree(17, 10, 500));
+
+// ##################################################
+
+// Filling an array (part 1)
+
+const arr = (N) => {
+  let arr = [];
+  for (let i = 0; i < N; i++) {
+    arr.push(i);
+  }
+  return arr;
+};
+// console.log(arr(5));
+
+// ##################################################
+
+// Exclusive "or" (xor) Logical Operator
+
+function xor(a, b) {
+  return a !== b;
+}
+
+// console.log(xor(false, true));
+
+// ##################################################
+
+// Vowel remover
+
+function shortcut(string) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  return string
+    .split("")
+    .filter((l) => vowels.indexOf(l) === -1)
+    .join("");
+}
+// console.log(shortcut("aws"));
+
+// ##################################################
+
+// get character from ASCII Value
+
+function getChar(c) {
+  return String.fromCharCode(c);
+}
+
+console.log(getChar(20));
+
+// ##################################################
+
+// Capitalization and Mutability
+
+function capitalizeWord(word) {
+  return word.replace(word[0], word[0].toUpperCase());
+}
+
+// console.log(capitalizeWord("word"));
+
+// ##################################################
+
+// The Wide-Mouthed frog!
+
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? "small" : "wide";
+}
+
+// ##################################################
+
+// Training JS #1: create your first JS function and print "Helloworld!"
+
+function helloWorld() {
+  var str = "Hello World!";
+  console.log(str);
+}
+
+// ##################################################
+
+// The 'if' function
+
+function _if(bool, func1, func2) {
+  return bool ? func1() : func2();
+}
+
+// ##################################################
+
+// A wolf in sheep's clothing
+
+function warnTheSheep(queue) {
+  let wolfIndex = queue.length - 1 - queue.indexOf("wolf");
+  // Oi! Sheep number 2! You are about to be eaten by a wolf!
+  return wolfIndex === 0
+    ? "Pls go away and stop eating my sheep"
+    : `Oi! Sheep number ${wolfIndex}! You are about to be eaten by a wolf!`;
+}
+
+// console.log(warnTheSheep(["sheep", "sheep", "wolf"]));
+// ##################################################
+
+// Palindrome Strings
+
+function isPalindrome(line) {
+  return String(line).split("").reverse().join("") === String(line);
+}
+
+// console.log(isPalindrome("anna"));
+
+// ##################################################
+
+// Remove duplicates from list
+
+function distinct(a) {
+  return a.reduce((a, c) => {
+    if (a.indexOf(c) === -1) {
+      a.push(c);
+    }
+    return a;
+  }, []);
+}
+
+// console.log(distinct([1, 2, 3, 3]));
+
+// ##################################################
+
+// Grasshopper - Function syntax debugging
+
+function main(verb, noun) {
+  return verb + noun;
+}
+
+// ##################################################
+
+// Grasshopper - Basic Function Fixer
+
+function addFive(num) {
+  var total = num + 5;
+  return total;
+}
+
+// ##################################################
+
+// Enumerable Magic #25 - Take the First N Elements
+
+function take(arr, n) {
+  return arr.slice(0, n);
+}
+
+// ##################################################
+
+// Alan Partridge II - Apple Turnover
+
+function apple(x) {
+  return Number(x) ** 2 > 1000
+    ? "It's hotter than the sun!!"
+    : "Help yourself to a honeycomb Yorkie for the glovebox.";
+}
+
+// console.log(apple("4"));
+
+// ##################################################
+
+// Convert to Binary
+
+function toBinary(n) {
+  let result = "";
+  let quotient = n;
+  let remainder = 0;
+
+  while (quotient > 0) {
+    remainder = quotient % 2;
+    result = remainder + result;
+    quotient = Math.floor(quotient / 2);
+  }
+  return result;
+}
+
+// console.log(toBinary(2));
+
+// ##################################################
+
+// Gravity Flip
+
+const flip = (d, a) => {
+  return a.sort((a, b) => (d === "R" ? a - b : b - a));
+};
+
+// console.log(flip("L", [3, 2, 1, 2]));
+
+// ##################################################
+
+// Lario and Muigi Pipe Problem
+
+function pipeFix(numbers) {
+  let max = Math.max(...numbers);
+  let min = Math.min(...numbers);
+  let result = [];
+  for (min; min <= max; min++) {
+    result.push(min);
+  }
+  return result;
+}
+// console.log(pipeFix([-1, 4]));
+
+// ##################################################
+
+// Find the Remainder
+
+function remainder(n, m) {
+  return Math.max(n, m) % Math.min(n, m);
+}
+
+// ##################################################
+
+// Hex to Decimal
+
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
+
+// ##################################################
