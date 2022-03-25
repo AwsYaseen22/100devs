@@ -1443,5 +1443,37 @@ function validateUsr(username) {
   console.log(username.match(res));
   return res.test(username);
 }
-console.log(validateUsr("asd43_34asd43_34"));
+// console.log(validateUsr("asd43_34asd43_34"));
+// ##################################################
+
+// Training JS #7: if..else and ternary operator
+
+function saleHotdogs(n) {
+  if (n < 5) {
+    return n * 100;
+  } else if (n >= 5 && n < 10) {
+    return n * 95;
+  } else {
+    return n * 90;
+  }
+}
+
+// ##################################################
+
+// Find Multiples of a Number
+
+function findMultiples(integer, limit) {
+  // BRAVE
+  //  return Array(Math.floor(limit / int))
+  //    .fill(1)
+  //    .map((x, i) => int * (i + 1));
+  let arr = [];
+  let numsLength = Math.floor(limit / integer);
+  for (let i = 1; i <= numsLength; i++) {
+    arr.push(integer * i);
+  }
+  return arr;
+}
+console.log(findMultiples(4, 27));
+
 // ##################################################
