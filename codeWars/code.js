@@ -1431,5 +1431,17 @@ function noBoringZeros(n) {
   }
 }
 
-console.log(noBoringZeros(0));
+// console.log(noBoringZeros(0));
+
+// ##################################################
+
+// Simple validation of a username with regex
+
+function validateUsr(username) {
+  res = /^[a-z0-9_]{4,16}$/;
+  console.log(res.test(username));
+  console.log(username.match(res));
+  return res.test(username);
+}
+console.log(validateUsr("asd43_34asd43_34"));
 // ##################################################
