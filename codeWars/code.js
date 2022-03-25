@@ -1382,3 +1382,54 @@ function hexToDec(hexString) {
 }
 
 // ##################################################
+
+// Swap Values
+
+function swapValues() {
+  var args = Array.prototype.slice.call(arguments);
+  var temp = args[0];
+  args[0] = args[1];
+  args[1] = temp;
+}
+// swapValues([1, 2], [3, 4]);
+
+// ##################################################
+
+// Plural
+function plural(n) {
+  return n > 0 && n === 1 ? false : true;
+}
+// console.log(plural(0));
+// ##################################################
+
+// Surface Area and Volume of a Box
+
+function getSize(width, height, depth) {
+  let result = [];
+  result.push(2 * (depth * width + depth * height + width * height));
+  result.push(width * height * depth);
+  return result;
+}
+// console.log(getSize(4, 2, 6));
+
+// ##################################################
+
+// No zeros for heros
+
+function noBoringZeros(n) {
+  if (n === 0) {
+    return 0;
+  }
+  let strN = String(n);
+
+  for (let i = strN.length - 1; i >= 0; i--) {
+    if (strN[i] === "0") {
+      strN = strN.slice(0, i);
+    } else {
+      return Number(strN);
+    }
+  }
+}
+
+console.log(noBoringZeros(0));
+// ##################################################
