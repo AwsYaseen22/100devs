@@ -1474,6 +1474,80 @@ function findMultiples(integer, limit) {
   }
   return arr;
 }
-console.log(findMultiples(4, 27));
+// console.log(findMultiples(4, 27));
 
+// ##################################################
+
+// L1: Bartender, drinks!
+
+function getDrinkByProfession(param) {
+  // correcting the param string
+  let result = param
+    .toLowerCase()
+    .split(" ")
+    .reduce((acc, word) => {
+      return acc + word.replace(word[0], word[0].toUpperCase()) + " ";
+    }, "")
+    .trim();
+  const obj = {
+    Jabroni: "Patron Tequila",
+    "School Counselor": "Anything with Alcohol",
+    Programmer: "Hipster Craft Beer",
+    "Bike Gang Member": "Moonshine",
+    Politician: "Your tax dollars",
+    Rapper: "Cristal",
+  };
+  return obj[result] ? obj[result] : "Beer";
+}
+// console.log(getDrinkByProfession("school counselor"));
+
+// ##################################################
+
+// Exclamation marks series #1: Remove an exclamation mark from the end of string
+
+function remove(string) {
+  // with regex
+  // return string.replace(/!$/, '')
+  if (string[string.length - 1] === "!") {
+    string = string.slice(0, string.length - 1);
+  }
+  return string;
+}
+// console.log(remove("aaa!"));
+
+// ##################################################
+
+// Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+// aeiouAEIOU
+
+function replace(s) {
+  // with regex
+  // return s.replace(/[aeiouAEIOU]/g, "!");
+  // without regex
+  let vowels = "aeiouAEIOU";
+  return s
+    .split("")
+    .map((s) => (vowels.includes(s) ? "!" : s))
+    .join("");
+}
+// console.log(replace("aeiou"));
+
+// ##################################################
+
+// Grasshopper - Variable Assignment Debug
+
+var a = "dev";
+var b = "Lab";
+
+var name = a + b;
+
+// ##################################################
+
+// 5 without numbers !!
+
+function unusualFive() {
+  return "unusual".indexOf("a");
+}
+
+console.log(unusualFive());
 // ##################################################
