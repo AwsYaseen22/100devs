@@ -1549,5 +1549,63 @@ function unusualFive() {
   return "unusual".indexOf("a");
 }
 
-console.log(unusualFive());
+// console.log(unusualFive());
+
+// ##################################################
+
+// Super Duper Easy
+
+function problem(x) {
+  if (typeof x === "string") {
+    return "Error";
+  }
+  return x * 50 + 6;
+}
+
+// ##################################################
+
+// Pre-FizzBuzz Workout #1
+
+function preFizz(n) {
+  let result = [];
+  for (let i = 1; i <= n; i++) {
+    result.push(i);
+  }
+  return result;
+}
+// console.log(preFizz(5));
+
+// ##################################################
+
+// Printing Array elements with Comma delimiters
+
+function printArray(array) {
+  return array.join(",");
+}
+// console.log(printArray([1, 2, 3, 4, 6]));
+// ##################################################
+
+// Grasshopper - Terminal game combat function
+
+function combat(health, damage) {
+  return health - damage < 0 ? 0 : health - damage;
+}
+
+// ##################################################
+
+// Merge two sorted arrays into one
+
+function mergeArrays(arr1, arr2) {
+  return arr1
+    .concat(arr2)
+    .reduce((a, c) => {
+      if (a.indexOf(c) === -1) {
+        a.push(c);
+      }
+      return a;
+    }, [])
+    .sort((a, b) => a - b);
+}
+
+console.log(mergeArrays([1, 2, 4], [3, 5, 6, 7, 8]));
 // ##################################################
