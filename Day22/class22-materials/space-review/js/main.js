@@ -16,6 +16,7 @@ console.log(doubleArr(numsArr));
 //Print the reverse of that string to the console
 
 function reverseStr(str) {
+  // console.log([...str].reverse());
   return str.split("").reverse().join("");
 }
 
@@ -24,7 +25,7 @@ console.log(reverseStr("Aws"));
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
 function palindrome(str) {
-  return reverseStr(str) === str;
+  return reverseStr(str) === str ? "It's palindrome" : "No";
 }
 
 console.log(palindrome("Aws"));

@@ -18,3 +18,12 @@ p1.healthUp();
 p1.healthUp();
 p1.healthUp();
 console.log(p1.health);
+// prototype will add a property but it not showed in the main details of the object but under the object prototype
+StreetFighter.prototype.age = 0;
+console.log(p1);
+let p2 = new StreetFighter("A", 100, 100, 100);
+console.log(p2.age); //0
+p2.age = 20;
+console.log(p2.age); //0
+// now we can see the property in the object as it has a special value for p2
+console.log(p2);
