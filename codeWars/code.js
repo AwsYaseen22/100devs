@@ -1607,5 +1607,83 @@ function mergeArrays(arr1, arr2) {
     .sort((a, b) => a - b);
 }
 
-console.log(mergeArrays([1, 2, 4], [3, 5, 6, 7, 8]));
+// console.log(mergeArrays([1, 2, 4], [3, 5, 6, 7, 8]));
+// ##################################################
+
+// To square(root) or not to square(root)
+// another approach to chech if number integer (1.2%1 === 0)false (2%1===0)true
+function squareOrSquareRoot(array) {
+  return array.map((n) =>
+    Math.sqrt(n) === Math.floor(Math.sqrt(n)) ? Math.sqrt(n) : Math.pow(n, 2)
+  );
+}
+// console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1]));
+
+// ##################################################
+
+// Remove First and Last Character Part Two
+
+function array(arr) {
+  if (arr.length <= 4) {
+    return null;
+  }
+  let result = arr.split(",").slice(1, -1).join(" ").trim();
+  return result.length > 0 ? result : null;
+}
+// console.log(array("1,2,3,4,5"));
+
+// ##################################################
+
+// Kata Example Twist
+
+// add the value "codewars" to the websites array 1,000 times
+var websites = [...Array.from({ length: 1000 }, (_) => "codewars")];
+// console.log(websites);
+
+// ##################################################
+
+// Name Shuffler
+
+function nameShuffler(str) {
+  return `${str.slice(str.indexOf(" "))} ${str.slice(
+    0,
+    str.indexOf(" ")
+  )}`.trim();
+}
+// console.log(nameShuffler("Aws Yasen"));
+// ##################################################
+
+// Basic Training: Add item to an Array
+
+// websites.push("codewars");
+
+// ##################################################
+
+// Reversing Words in a String
+
+function reverse(string) {
+  return string.split(" ").reverse().join(" ");
+}
+
+// ##################################################
+
+// Smallest unused ID
+
+function nextId(ids) {
+  let sorted = ids.sort((a, b) => a - b);
+  if (sorted[0] > 0) {
+    return 0;
+  }
+  console.log(sorted);
+  let result = sorted[sorted.length - 1] + 1;
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i + 1] && sorted[i + 1] - sorted[i] > 1) {
+      result = sorted[i] + 1;
+      console.log(sorted[i + 1], sorted[i], result);
+      return result;
+    }
+  }
+  return result;
+}
+console.log(nextId([0, 1, 3, 3, 4, 5]));
 // ##################################################
