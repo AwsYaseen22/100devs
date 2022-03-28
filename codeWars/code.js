@@ -1685,7 +1685,7 @@ function nextId(ids) {
   }
   return result;
 }
-console.log(nextId([0, 1, 3, 3, 4, 5]));
+// console.log(nextId([0, 1, 3, 3, 4, 5]));
 // ##################################################
 
 // Sleigh Authentication
@@ -1729,6 +1729,32 @@ function chromosomeCheck(sperm) {
 
 // Mr. Freeze
 
-Object.freeze(MrFreeze);
+// Object.freeze(MrFreeze);
+
+// ##################################################
+
+// How old will I be in 2099?
+
+function calculateAge() {
+  let y1 = arguments[0];
+  let y2 = arguments[1];
+  result = y2 > y1 ? y2 - y1 : y1 - y2;
+  if (y2 > y1) {
+    return `You are ${result} year${result > 1 ? "s" : ""} old.`;
+  } else if (y1 > y2) {
+    return `You will be born in ${result} year${result > 1 ? "s" : ""}.`;
+  } else {
+    return "You were born this very year!";
+  }
+  // let result = y2 > y1 ? y2 - y1 : 2;
+}
+// console.log(calculateAge(2016, 2012));
+// ##################################################
+
+// Training JS #5: Basic data types--Object
+
+function animal(obj) {
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+}
 
 // ##################################################
