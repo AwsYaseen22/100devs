@@ -1687,3 +1687,48 @@ function nextId(ids) {
 }
 console.log(nextId([0, 1, 3, 3, 4, 5]));
 // ##################################################
+
+// Sleigh Authentication
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function (name, password) {
+  return name === "Santa Claus" && password === "Ho Ho Ho!";
+};
+
+// ##################################################
+
+// Color Ghost
+
+var Ghost = function () {
+  let rand = Math.floor(Math.random() * 4);
+  const colors = ["white", "yellow", "purple", "red"];
+  this.color = colors[rand];
+};
+
+// ##################################################
+
+// USD => CNY
+
+function usdcny(usd) {
+  let chi = usd * 6.75;
+  return `${chi.toFixed(2)} Chinese Yuan`;
+}
+
+// ##################################################
+
+// Determine offspring sex based on genes XX and XY chromosomes
+
+function chromosomeCheck(sperm) {
+  return sperm.indexOf("Y") === -1
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter.";
+}
+
+// ##################################################
+
+// Mr. Freeze
+
+Object.freeze(MrFreeze);
+
+// ##################################################
