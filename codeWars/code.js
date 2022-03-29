@@ -1758,3 +1758,53 @@ function animal(obj) {
 }
 
 // ##################################################
+
+// Enumerable Magic #3 - Does My List Include This?
+
+function include(arr, item) {
+  return arr.indexOf(item) !== -1;
+}
+// console.log(include([1, 2, 3], 3));
+
+// ##################################################
+
+// Formatting decimal places #0
+
+function twoDecimalPlaces(n) {
+  return +n.toFixed(2);
+}
+
+// ##################################################
+
+// Bin to Decimal
+
+function binToDec(bin) {
+  return parseInt(bin, 2);
+}
+
+// ##################################################
+
+// Grasshopper - Array Mean
+
+var findAverage = function (nums) {
+  return nums.reduce((a, c) => a + c, 0) / nums.length;
+};
+
+// ##################################################
+
+// Thinkful - Number Drills: Pixelart planning
+
+function isDivisible(wallLength, pixelSize) {
+  return wallLength % pixelSize == 0 ? true : false;
+}
+
+// ##################################################
+
+// Add Length
+
+function addLength(str) {
+  return str.split(" ").map((w) => `${w} ${w.length}`);
+}
+// console.log(addLength("hello world"));
+
+// ##################################################
