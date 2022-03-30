@@ -1808,3 +1808,56 @@ function addLength(str) {
 // console.log(addLength("hello world"));
 
 // ##################################################
+
+// Welcome to the City
+
+function sayHello(name, city, state) {
+  return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
+}
+// Hello, John Smith! Welcome to Phoenix, Arizona!
+
+// ##################################################
+
+// Multiple of index
+
+function multipleOfIndex(array) {
+  return array.filter((n, i) => n % i === 0);
+}
+
+// console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]));
+// ##################################################
+
+// Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+
+function remove(string) {
+  while (string[string.length - 1] == "!") {
+    string = string.slice(0, -1);
+    console.log(string);
+  }
+  return string;
+}
+// console.log(remove("hello! how are you !!!"));
+
+// ##################################################
+
+// Regexp Basics - is it a digit?
+// One digit only
+String.prototype.digit = function () {
+  if (this.length === 0) {
+    return false;
+  }
+  let reg = /^\d{1}$/g;
+  return reg.test(this);
+};
+
+// console.log("14".digit());
+// ##################################################
+
+// Find the position!
+
+function position(letter) {
+  return letter.charCodeAt(0) - 96;
+}
+
+console.log(position("a"));
+// ##################################################
