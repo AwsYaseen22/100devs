@@ -1859,5 +1859,72 @@ function position(letter) {
   return letter.charCodeAt(0) - 96;
 }
 
-console.log(position("a"));
+// console.log(position("a"));
+// ##################################################
+
+// Take the Derivative
+
+function derive(coefficient, exponent) {
+  return `${coefficient * exponent}x^${
+    exponent !== 1 ? exponent - 1 : exponent
+  }`;
+}
+
+// ##################################################
+
+// Is it a number?
+
+function isDigit(s) {
+  if (/[a-z]/g.test(s)) {
+    return false;
+  }
+  let s2 = s.replace(/[\s-]/g, "");
+  console.log(s2);
+  if (parseFloat(s2) && s2.indexOf(".") !== -1) {
+    return true;
+  } else if (String(parseInt(s2)).length === 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isDigit("-0"));
+
+// ##################################################
+
+// Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+
+function remove(s, n) {
+  if (n <= 0) {
+    return s;
+  }
+  s = s.replace("!", "");
+  return remove(s, n - 1);
+}
+// console.log(remove("!hi!!!!!!!", 1));
+
+// ##################################################
+
+// Do you speak "English"?
+
+function spEng(sentence) {
+  return sentence.toLowerCase().indexOf("english") !== -1;
+}
+
+// ##################################################
+
+// Regex count lowercase letters
+
+function lowercaseCount(str) {
+  let count = 0;
+  str.split("").forEach((s) => {
+    if (/[a-z]/.test(s)) {
+      count++;
+    }
+  });
+  return count;
+}
+
+// console.log(lowercaseCount("AwsYaseen"));
 // ##################################################
