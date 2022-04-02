@@ -2064,26 +2064,91 @@ function stairsIn20(s) {
 
 // Holiday VI - Shark Pontoon
 
-// did not pass the test
-
 function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
-  // console.log(
-  //   `${pontoonDistance},${sharkDistance},${youSpeed},${sharkSpeed},${dolphin}`
-  // );
-  // let yourTime = pontoonDistance / youSpeed;
-  // let sharkTime = sharkDistance / (sharkSpeed / dolphin ? 2 : 1);
-  // console.log(sharkTime);
-  // console.log(yourTime);
-  // return sharkTime - yourTime > yourTime ? "Alive!" : "Shark Bait!";
-  if (youSpeed > sharkSpeed) {
-    return (youSpeed > sharkSpeed / dolphin ? 2 : 1) ? "Alive!" : "Shark Bait!";
-  } else {
-    let yourTime = pontoonDistance / youSpeed;
-    let sharkTime = sharkDistance / (sharkSpeed / dolphin ? 2 : 1);
-    console.log(sharkTime);
-    console.log(yourTime);
-    return sharkTime - yourTime > yourTime ? "Alive!" : "Shark Bait!";
+  if (dolphin) {
+    sharkSpeed = sharkSpeed / 2;
+  }
+  let yourTime = pontoonDistance / youSpeed;
+  let sharkTime = sharkDistance / sharkSpeed;
+
+  return yourTime < sharkTime ? "Alive!" : "Shark Bait!";
+}
+// console.log(shark(7, 8, 3, 4, true));
+// ##################################################
+
+// Return the day
+function whatday(num) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[num - 1]
+    ? days[num - 1]
+    : "Wrong, please enter a number between 1 and 7";
+}
+
+// ##################################################
+
+// Leonardo Dicaprio and Oscars
+
+function leo(oscar) {
+  if (oscar === 88) {
+    return "Leo finally won the oscar! Leo is happy";
+  } else if (oscar === 86) {
+    return "Not even for Wolf of wallstreet?!";
+  } else if (oscar < 88) {
+    return "When will you give Leo an Oscar?";
+  } else if (oscar > 88) {
+    return "Leo got one already!";
   }
 }
-console.log(shark(49, 160, 3, 10, false)); // Alive
+
+// ##################################################
+
+// Are arrow functions odd?
+
+function odds(values) {
+  return values.filter((n) => n % 2 !== 0);
+}
+
+// ##################################################
+
+//  Sum of Multiples
+
+function sumMul(n, m) {
+  if (m <= 0) {
+    return "INVALID";
+  }
+  let arr = [];
+  for (let i = n; i < m; i += n) {
+    arr.push(i);
+  }
+  return arr.reduce((a, c) => a + c, 0);
+}
+
+// console.log(sumMul(4, -7));
+// ##################################################
+
+// simple calculator
+
+function calculator(a, b, sign) {
+  let op = {
+    "+": () => a + b,
+    "-": () => a - b,
+    "*": () => a * b,
+    "/": () => a / b,
+  };
+  if (typeof a !== "number" || typeof b !== "number" || !(sign in op)) {
+    return "unknown value";
+  } else {
+    return op[sign]();
+  }
+}
+console.log(calculator(1, 2, "+"));
+
 // ##################################################
