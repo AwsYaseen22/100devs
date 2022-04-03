@@ -2149,6 +2149,71 @@ function calculator(a, b, sign) {
     return op[sign]();
   }
 }
-console.log(calculator(1, 2, "+"));
+// console.log(calculator(1, 2, "+"));
+
+// ##################################################
+
+// Remove the time
+
+function shortenToDate(longDate) {
+  return longDate.split(",")[0];
+}
+
+// ##################################################
+
+// A Strange Trip to the Market
+
+function isLockNessMonster(s) {
+  return (
+    s.indexOf("tree fiddy") > -1 ||
+    s.indexOf("3.50") > -1 ||
+    s.indexOf("three fifty") > -1
+  );
+}
+
+// ##################################################
+
+// Thinkful - Number Drills: Blue and red marbles
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  let blueRemains = blueStart - bluePulled;
+  let redRemains = redStart - redPulled;
+  return blueRemains / (blueRemains + redRemains);
+}
+
+// console.log(guessBlue(5, 7, 4, 3));
+
+// ##################################################
+
+// For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre
+
+var quote = function (fighter) {
+  if (fighter.toLowerCase() === "george saint pierre") {
+    return "I am not impressed by your performance.";
+  } else if (fighter.toLowerCase() === "conor mcgregor") {
+    return "I'd like to take this chance to apologize.. To absolutely NOBODY!";
+  }
+};
+
+// ##################################################
+
+// Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+
+function remove(string) {
+  return (
+    string
+      .split("")
+      .filter((c) => c !== "!")
+      .join("") + "!"
+  );
+}
+console.log(remove("!!!!Hi!!!"));
+// ##################################################
+
+// Grasshopper - Combine strings
+
+function combineNames(fName, lName) {
+  return `${fName} ${lName}`;
+}
 
 // ##################################################
