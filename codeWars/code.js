@@ -2237,3 +2237,50 @@ function closeCompare(a, b, margin) {
 }
 
 // ##################################################
+
+// No Loops 2 - You only need one
+
+function check(a, x) {
+  return a.includes(x);
+}
+
+// ##################################################
+
+// Grader
+function grader(score) {
+  console.log(score);
+  switch (true) {
+    case score < 0.6 || score > 1:
+      return "F";
+    case score < 0.7:
+      return "D";
+    case score < 0.8:
+      return "C";
+    case score < 0.9:
+      return "B";
+    case score >= 0.9:
+      return "A";
+  }
+}
+// console.log(grader(0.65));
+// ##################################################
+
+// Training JS #8: Conditional statement--switch
+
+function howManydays(month) {
+  var days;
+  switch (true) {
+    case [1, 3, 5, 7, 8, 10, 12].includes(month):
+      days = 31;
+      break;
+    case [4, 6, 9, 11].includes(month):
+      days = 30;
+      break;
+    default:
+      days = 28;
+      break;
+  }
+  return days;
+}
+
+// ##################################################
