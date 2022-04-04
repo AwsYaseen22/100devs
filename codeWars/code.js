@@ -2207,13 +2207,33 @@ function remove(string) {
       .join("") + "!"
   );
 }
-console.log(remove("!!!!Hi!!!"));
+// console.log(remove("!!!!Hi!!!"));
 // ##################################################
 
 // Grasshopper - Combine strings
 
 function combineNames(fName, lName) {
   return `${fName} ${lName}`;
+}
+
+// ##################################################
+
+// Compare within margin
+
+// Skipped, the solution unlocked
+function closeCompare(a, b, margin) {
+  // return Math.abs(a - b) <= margin ? 0 : a < b ? -1 : 1;
+  if (!margin) {
+    margin = 0;
+  }
+  let dif = Math.abs(a - b);
+  if (dif <= margin) {
+    return 0;
+  } else if (a < b) {
+    return -1;
+  } else {
+    return 1;
+  }
 }
 
 // ##################################################
