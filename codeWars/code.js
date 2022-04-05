@@ -2284,3 +2284,76 @@ function howManydays(month) {
 }
 
 // ##################################################
+
+// Parse float
+
+function parseF(s) {
+  return /^[\d.]*$/g.test(s) ? parseFloat(s) : null;
+  // without regex
+  // return isNaN(parseFloat(s)) ? null : parseFloat(s);
+}
+// console.log(parseF("234.85"));
+
+// ##################################################
+
+// Price of Mangoes
+
+// 3 2
+// n 2*n/3
+function mango(quantity, price) {
+  // console.log(quantity / 1.5);
+  return quantity >= 3 ? Math.ceil(quantity / 1.5) * price : quantity * price;
+}
+// console.log(mango(31, 11));
+// ##################################################
+
+// String cleaning
+
+function stringClean(s) {
+  //g.test(s)
+  return s.replace(/\d/g, "");
+}
+
+// console.log(stringClean("(E3at m2e2!!)"));
+// ##################################################
+
+// Training JS #6: Basic data types--Boolean and conditional statements if..else
+// var a = 1,
+//   b = 2,
+//   c = 1;
+function trueOrFalse(val) {
+  if (val) return "true";
+  else return "false";
+}
+
+// console.log(trueOrFalse(a === b));
+// ##################################################
+
+// Sum of differences in array
+
+function sumOfDifferences(arr) {
+  let result = 0;
+  console.log(arr.sort((a, b) => b - a));
+  arr
+    .sort((a, b) => b - a)
+    .map((n, i) => {
+      if (!isNaN(arr[i + 1])) {
+        console.log(n - arr[i + 1]);
+        result += n - arr[i + 1];
+      }
+    });
+  return result;
+}
+// from others solution
+// its mind blowing that it solved by max-min thats it
+//  return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+
+console.log(sumOfDifferences([1, 2, 10, 34, 54]));
+// console.log(
+//   sumOfDifferences([
+//     16, -8, -9, 2, 13, 1, -15, 13, -18, 5, 10, 10, 11, -3, -12, -9, 0, 9, -11,
+//     6,
+//   ])
+// );
+
+// ##################################################
