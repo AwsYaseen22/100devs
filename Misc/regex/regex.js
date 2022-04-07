@@ -182,6 +182,10 @@ console.log(result);
 let username = "Jacksmith12";
 let userCheck = /^[a-zA-Z]{2,}\d{0,2}$/; // Change this line
 let twoLetterUserCheck = /^[a-zA-Z]{2}(?!\d)$/; //
+// ##################
+// this one is the solution
+// /^[a-z]\d{2,}$|^[a-z][a-z]+\d*$/gi
+// ##################
 let result = userCheck.test(username);
 result1 = userCheck.test(username);
 result2 = twoLetterUserCheck.test(username);
