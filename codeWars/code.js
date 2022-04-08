@@ -1983,18 +1983,13 @@ function pillars(num_pill, dist, width) {
 // Classic Hello World
 
 // Print "Hello World!" to the screen
-// did not pass the test
+// pass it see the solution we should use the static with the method
 class Solution {
-  constructor(param1, param2) {
-    this.param1 = param1;
-    this.param2 = param2;
-  }
-  main() {
+  static main() {
     console.log("Hello Wolrd!\n");
   }
 }
-let s = new Solution();
-// s.main("hello", "world");
+// Solution.main();
 // ##################################################
 
 // How many stairs will Suzuki climb in 20 years?
@@ -2496,4 +2491,108 @@ function sixToast(num) {
   return num > 6 ? num - 6 : 6 - num;
 }
 
+// ##################################################
+
+// NBA full 48 minutes average
+
+function pointsPer48(ppg, mpg) {
+  if (ppg === 0 || mpg === 0) {
+    return 0;
+  }
+  return Number(((ppg * 48) / mpg).toFixed(1));
+}
+// console.log(pointsPer48(12, 20));
+// ##################################################
+
+// Define a card suit
+let deck = [
+  "2♣",
+  "3♣",
+  "4♣",
+  "5♣",
+  "6♣",
+  "7♣",
+  "8♣",
+  "9♣",
+  "10♣",
+  "J♣",
+  "Q♣",
+  "K♣",
+  "A♣",
+  "2♦",
+  "3♦",
+  "4♦",
+  "5♦",
+  "6♦",
+  "7♦",
+  "8♦",
+  "9♦",
+  "10♦",
+  "J♦",
+  "Q♦",
+  "K♦",
+  "A♦",
+  "2♥",
+  "3♥",
+  "4♥",
+  "5♥",
+  "6♥",
+  "7♥",
+  "8♥",
+  "9♥",
+  "10♥",
+  "J♥",
+  "Q♥",
+  "K♥",
+  "A♥",
+  "2♠",
+  "3♠",
+  "4♠",
+  "5♠",
+  "6♠",
+  "7♠",
+  "8♠",
+  "9♠",
+  "10♠",
+  "J♠",
+  "Q♠",
+  "K♠",
+  "A♠",
+];
+function defineSuit(card) {
+  switch (card[card.length - 1]) {
+    case "♣":
+      return "clubs";
+    case "♦":
+      return "diamonds";
+    case "♥":
+      return "hearts";
+    case "♠":
+      return "spades";
+  }
+}
+
+// console.log(defineSuit("10♥"));
+
+// ##################################################
+
+// Find out whether the shape is a cube
+
+var cubeChecker = function (volume, side) {
+  if (volume <= 0 || side <= 0) {
+    return false;
+  }
+  return side ** 3 === volume ? true : false;
+};
+
+// ##################################################
+
+// Geometry Basics: Distance between points in 2D
+
+function distanceBetweenPoints(a, b) {
+  let first = Math.pow(b["x"] - a["x"], 2);
+  let second = Math.pow(b["y"] - a["y"], 2);
+  return Math.sqrt(first + second);
+}
+console.log(distanceBetweenPoints({ x: 1, y: 6 }, { x: 4, y: 2 }));
 // ##################################################
