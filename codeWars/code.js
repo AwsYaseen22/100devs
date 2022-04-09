@@ -2596,3 +2596,106 @@ function distanceBetweenPoints(a, b) {
 }
 // console.log(distanceBetweenPoints({ x: 1, y: 6 }, { x: 4, y: 2 }));
 // ##################################################
+
+// Switch/Case - Bug Fixing #6
+
+function evalObject(value) {
+  var result = 0;
+  switch (value.operation) {
+    case "+":
+      result = value.a + value.b;
+      break;
+    case "-":
+      result = value.a - value.b;
+      break;
+    case "/":
+      result = value.a / value.b;
+      break;
+    case "*":
+      result = value.a * value.b;
+      break;
+    case "%":
+      result = value.a % value.b;
+      break;
+    case "^":
+      result = Math.pow(value.a, value.b);
+      break;
+  }
+  return result;
+}
+
+// ##################################################
+
+// Duck Duck Goose
+
+function duckDuckGoose(players, goose) {
+  let index;
+  if (goose % players.length === 0) {
+    index = players.length - 1;
+  } else {
+    index = (goose % players.length) - 1;
+  }
+
+  console.log(players.length, goose);
+  console.log(index);
+  return players[index].name;
+}
+
+// let arr2 = [
+//   { name: "a" },
+//   { name: "b" },
+//   { name: "c" },
+//   { name: "d" },
+//   { name: "c" },
+//   { name: "e" },
+//   { name: "f" },
+//   { name: "g" },
+//   { name: "h" },
+//   { name: "z" },
+// ];
+
+// let ind = 2;
+
+// console.log(duckDuckGoose(arr2, ind));
+// ##################################################
+
+// Fix your code before the garden dies!
+
+function rainAmount(mm) {
+  if (mm < 40) {
+    return "You need to give your plant " + (40 - mm) + "mm of water";
+  } else {
+    return "Your plant has had more than enough water for today!";
+  }
+}
+
+// ##################################################
+
+// Find the Integral
+
+function integrate(coefficient, exponent) {
+  exponent += 1;
+  return `${coefficient / exponent}x^${exponent}`;
+}
+
+// ##################################################
+
+// Template Strings
+
+var TempleStrings = function (obj, feature) {
+  return `${obj} are ${feature}`;
+};
+
+// ##################################################
+
+// Fix the Bugs (Syntax) - My First Kata
+
+function myFirstKata(a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+    return false;
+  } else {
+    return (a % b) + (b % a);
+  }
+}
+
+// ##################################################
