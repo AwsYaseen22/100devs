@@ -2594,5 +2594,5 @@ function distanceBetweenPoints(a, b) {
   let second = Math.pow(b["y"] - a["y"], 2);
   return Math.sqrt(first + second);
 }
-console.log(distanceBetweenPoints({ x: 1, y: 6 }, { x: 4, y: 2 }));
+// console.log(distanceBetweenPoints({ x: 1, y: 6 }, { x: 4, y: 2 }));
 // ##################################################
