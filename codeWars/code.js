@@ -2699,3 +2699,104 @@ function myFirstKata(a, b) {
 }
 
 // ##################################################
+
+// Enumerable Magic #1 - True for All?
+
+// function all(arr, fun) {
+//   return arr.every(fun);
+// }
+
+// ##################################################
+
+// ASCII Total
+
+function uniTotal(string) {
+  return string.split("").reduce((a, c) => a + c.charCodeAt(), 0);
+}
+
+// ##################################################
+
+// Type of sum
+
+function typeOfSum(a, b) {
+  return typeof (a + b);
+}
+
+// ##################################################
+
+// Find the Slope
+
+function slope(points) {
+  let sl = (points[3] - points[1]) / (points[2] - points[0]);
+  return points[2] - points[0] === 0 ? "undefined" : String(Math.floor(sl));
+}
+
+// console.log(slope([12, -18, -15, -18]));
+
+// ##################################################
+
+// Count words
+
+function countWords(str) {
+  return str.split(/\s/g).filter((e) => /[a-zA-Z0-9]/.test(e)).length;
+}
+// console.log(countWords("Dear   Victoria, I love  to press   space button."));
+// console.log(countWords("d$f#E"));
+// console.log(countWords("﻿Hello﻿World "));
+// ##################################################
+
+// Name on billboard
+
+function billboard(name, price = 30) {
+  let p = price ? price : 30;
+  return name.split("").reduce((a, c) => a + p, 0);
+}
+
+// ##################################################
+
+// Ensure question
+
+function ensureQuestion(s) {
+  return s[s.length - 1] === "?" ? s : s + "?";
+}
+// console.log(ensureQuestion(""));
+// ##################################################
+
+// Classy Extentions
+
+// class Cat extends Animal {
+//   speak() {
+//     return this.name + " meows.";
+//   }
+// }
+
+// ##################################################
+
+// Man in the west
+
+function checkTheBucket(bucket) {
+  return bucket.some((s) => s === "gold");
+}
+
+// ##################################################
+
+// Chuck Norris VII - True or False? (Beginner)
+
+function ifChuckSaysSo() {
+  return !true;
+}
+
+// ##################################################
+
+// Wilson primes
+
+function amIWilson(p) {
+  let multi = 1;
+  for (let i = p - 1; i > 0; i--) {
+    multi *= i;
+  }
+  return Number.isInteger((multi + 1) / (p * p));
+}
+// console.log(amIWilson(5));
+
+// ##################################################
