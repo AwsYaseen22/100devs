@@ -20,14 +20,12 @@ let cocktails;
 fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data.drinks);
     cocktails = data.drinks;
     createList(cocktails);
     let lis = document.querySelectorAll("li");
     return lis;
   })
   .then((x) => {
-    // console.log(x);
     x.forEach((l) => l.addEventListener("click", () => clickItem(l)));
   });
 
@@ -58,11 +56,8 @@ function backToAll() {
 
 function getIngredients(ing) {
   console.log(ing);
-  //   let leng = Object.keys(ing).length;
   let ingredients = "";
   for (let i = 1; i <= 15; i++) {
-    // console.log(ing[`strIngredient${i}`]);
-    // console.log(ing[`strMeasure${i}`]);
     ing[`strIngredient${i}`]
       ? (ingredients += `${ing[`strIngredient${i}`]} (${
           ing[`strMeasure${i}`]
