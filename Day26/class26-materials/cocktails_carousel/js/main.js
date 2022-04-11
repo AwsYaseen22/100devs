@@ -1,5 +1,15 @@
 // The user will enter a cocktail. Get a cocktail name, photo, and instructions and place them in the DOM
 
+/*
+<section class="details hidden">
+  <h3>Ingredients</h3>
+  <span class="ingredients"></span>
+  
+  <h3>Instructions</h3>
+  <span class="instructions"></span>
+</section> 
+*/
+
 let carousel = document.querySelector(".carousel");
 let current = 0;
 
@@ -16,7 +26,7 @@ function createList(cocktailsList) {
         <div class="carousel-item__container">
           <h1 class="carousel-item__title">${cocktailsList[i].strDrink}</h1>
           <button>Details</button>
-          <div class='details hidden'>
+          <div class="details hidden">
             <h1></h1>
           </div>
         </div>
@@ -24,7 +34,6 @@ function createList(cocktailsList) {
         <span class='hidden'>${cocktailsList[i].idDrink}</span>
     `;
     carousel.appendChild(div);
-    // console.log(div);
   }
 }
 
@@ -32,9 +41,7 @@ let cocktails;
 fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data.drinks);
     cocktails = data.drinks;
-    console.log(cocktails);
     createList(cocktails);
     let items = document.querySelectorAll(".carousel-item");
     // console.log(items);
@@ -44,17 +51,23 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
     console.log(x[0]);
     x[0].classList.add("active");
     let total = x.length;
-    console.log(total);
+    // console.log(total);
     // let current = 0;
     document.querySelector("#moveRight").addEventListener("click", () => {
       let next = current;
       current = current + 1;
       setSlide(next, current);
+      document
+        .querySelectorAll(".details")
+        .forEach((el) => el.classList.add("hidden"));
     });
     document.querySelector("#moveLeft").addEventListener("click", () => {
       let prev = current;
       current = current - 1;
       setSlide(prev, current);
+      document
+        .querySelectorAll(".details")
+        .forEach((el) => el.classList.add("hidden"));
     });
     function setSlide(prev, next) {
       let slide = current;
@@ -75,6 +88,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
 
     x.forEach((l) => {
       // console.log(l.children[1].children[0]);
+      // event listener for the button
       l.children[1].children[0].children[1].addEventListener("click", () =>
         // clickItem(l.children[1].children[0].children[2])
         clickItem(l)
@@ -93,9 +107,12 @@ function clickItem(e) {
     .then((data) => data.drinks[0])
     .then((drink) => {
       console.log(drink);
-      document.querySelector(".details").classList.toggle("hidden");
+      e.children[1].children[0].children[2].children[0].innerText =
+        drink.strDrink;
+      e.children[1].children[0].children[2].classList.toggle("hidden");
+      // document.querySelector(".details h1").innerText = drink.strDrink;
+      // document.querySelector(".details").classList.toggle("hidden");
       // document.querySelector(".details img").src = drink.strDrinkThumb;
-      document.querySelector(".details h1").innerText = drink.strDrink;
       // document.querySelector(".details .ingredients").innerText =
       //   getIngredients(drink);
       // document.querySelector(".details .instructions").innerText =

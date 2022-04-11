@@ -21,7 +21,10 @@ body{
 }
 .hidden{
   display: none !important;
-  /* visibility: hidden; */
+  visibility: hidden;
+}
+.red{
+  background-color: red;
 }
 
 h1{
