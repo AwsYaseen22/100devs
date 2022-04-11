@@ -2800,3 +2800,80 @@ function amIWilson(p) {
 // console.log(amIWilson(5));
 
 // ##################################################
+
+// Square Every Digit
+
+function squareDigits(num) {
+  return Number(
+    String(num)
+      .split("")
+      .reduce((a, c) => {
+        return a + String(Number(c) ** 2);
+      }, "")
+  );
+}
+// console.log(squareDigits(3212));
+
+// ##################################################
+
+// Highest and Lowest
+
+function highAndLow(numbers) {
+  let arr = numbers.split(" ");
+  return `${Math.max(...arr)} ${Math.min(...arr)}`;
+}
+
+// ##################################################
+
+// Disemvowel Trolls
+
+function disemvowel(str) {
+  return str.replace(/[aeouiAEOUI]/g, "");
+}
+console.log(disemvowel("awsawsuioe"));
+// ##################################################
+
+// Logical calculator
+// not solved yed
+function logicalCalc(array, op) {
+  // comp = op==='AND'? '&&' : op==='OR'? '||' : '!=';
+  // array.reduce((a,c)=> )
+  // if (op === "AND") {
+  //   return !array.includes(false);
+  // } else if (op === "OR") {
+  //   return array.includes(true);
+  // } else if (op === "XOR") {
+  //   for()
+  //   if (array.every((b) => b === array[0])) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // }
+}
+
+// console.log(logicalCalc([true, true, true, false], "AND"));
+
+// console.log(logicalCalc([true, true, true, false], "AND"), false); //false);
+// console.log(logicalCalc([true, true, true, false], "OR"), true); //true);
+// console.log(logicalCalc([true, true, true, false], "XOR"), true); //true);
+// console.log(logicalCalc([true, true, false, false], "AND"), false); //false);
+// console.log(logicalCalc([true, true, false, false], "OR"), true); //true);
+// console.log(logicalCalc([true, true, false, false], "XOR"), false); //false);
+// console.log(logicalCalc([true, false, false, false], "AND"), false); //false);
+// console.log(logicalCalc([true, false, false, false], "OR"), true); //true);
+// console.log(logicalCalc([true, false, false, false], "XOR"), true); //true);
+// console.log(logicalCalc([true, true], "AND"), true); //true);
+// console.log(logicalCalc([true, true], "OR"), true); //true);
+// console.log(logicalCalc([true, true], "XOR"), false); //false);
+// console.log(logicalCalc([false, false], "AND"), false); //false);
+// console.log(logicalCalc([false, false], "OR"), false); //false);
+// console.log(logicalCalc([false, false], "XOR"), false); //false);
+// console.log(logicalCalc([false], "AND"), false); //false);
+// console.log(logicalCalc([false], "OR"), false); //false);
+// console.log(logicalCalc([false], "XOR"), false); //false);
+// console.log(logicalCalc([true], "AND"), true); //true);
+// console.log(logicalCalc([true], "OR"), true); //true);
+// console.log(logicalCalc([true], "XOR"), true); //true);
+
+// ##################################################
