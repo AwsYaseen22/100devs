@@ -15,6 +15,10 @@ function createList(cocktailsList) {
       <div class="carousel-item__info">
         <div class="carousel-item__container">
           <h1 class="carousel-item__title">${cocktailsList[i].strDrink}</h1>
+          <button>Details</button>
+          <div class='details hidden'>
+            <h1></h1>
+          </div>
         </div>
       </div>
         <span class='hidden'>${cocktailsList[i].idDrink}</span>
@@ -30,6 +34,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
   .then((data) => {
     // console.log(data.drinks);
     cocktails = data.drinks;
+    console.log(cocktails);
     createList(cocktails);
     let items = document.querySelectorAll(".carousel-item");
     // console.log(items);
@@ -67,27 +72,36 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
       console.log("current: ", current);
       console.log("prev: ", prev);
     }
-    x.forEach((l) => l.addEventListener("click", () => clickItem(l)));
+
+    x.forEach((l) => {
+      // console.log(l.children[1].children[0]);
+      l.children[1].children[0].children[1].addEventListener("click", () =>
+        // clickItem(l.children[1].children[0].children[2])
+        clickItem(l)
+      );
+    });
   });
 
-// function clickItem(e) {
-//   console.log("clicked");
-//   let id = e.children[2].innerText;
-//   document.querySelector(".list").classList.toggle("hidden");
-//   document.querySelector(".details").classList.toggle("hidden");
-//   fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
-//     .then((response) => response.json())
-//     .then((data) => data.drinks[0])
-//     .then((drink) => {
-//       console.log(drink);
-//       document.querySelector(".details img").src = drink.strDrinkThumb;
-//       document.querySelector(".details h2").innerText = drink.strDrink;
-//       document.querySelector(".details .ingredients").innerText =
-//         getIngredients(drink);
-//       document.querySelector(".details .instructions").innerText =
-//         drink.strInstructions;
-//     });
-// }
+function clickItem(e) {
+  console.log("clicked");
+  console.log(e);
+  let id = e.children[2].innerText;
+  // document.querySelector(".list").classList.toggle("hidden");
+  // document.querySelector(".details").classList.toggle("hidden");
+  fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+    .then((response) => response.json())
+    .then((data) => data.drinks[0])
+    .then((drink) => {
+      console.log(drink);
+      document.querySelector(".details").classList.toggle("hidden");
+      // document.querySelector(".details img").src = drink.strDrinkThumb;
+      document.querySelector(".details h1").innerText = drink.strDrink;
+      // document.querySelector(".details .ingredients").innerText =
+      //   getIngredients(drink);
+      // document.querySelector(".details .instructions").innerText =
+      //   drink.strInstructions;
+    });
+}
 
 // document.querySelector("button").addEventListener("click", backToAll);
 // function backToAll() {
@@ -95,18 +109,18 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic")
 //   document.querySelector(".details").classList.toggle("hidden");
 // }
 
-// function getIngredients(ing) {
-//   console.log(ing);
-//   //   let leng = Object.keys(ing).length;
-//   let ingredients = "";
-//   for (let i = 1; i <= 15; i++) {
-//     // console.log(ing[`strIngredient${i}`]);
-//     // console.log(ing[`strMeasure${i}`]);
-//     ing[`strIngredient${i}`]
-//       ? (ingredients += `${ing[`strIngredient${i}`]} (${
-//           ing[`strMeasure${i}`]
-//         })\n`)
-//       : "";
-//   }
-//   return ingredients;
-// }
+function getIngredients(ing) {
+  console.log(ing);
+  //   let leng = Object.keys(ing).length;
+  let ingredients = "";
+  for (let i = 1; i <= 15; i++) {
+    // console.log(ing[`strIngredient${i}`]);
+    // console.log(ing[`strMeasure${i}`]);
+    ing[`strIngredient${i}`]
+      ? (ingredients += `${ing[`strIngredient${i}`]} (${
+          ing[`strMeasure${i}`]
+        })\n`)
+      : "";
+  }
+  return ingredients;
+}
