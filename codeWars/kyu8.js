@@ -2830,7 +2830,7 @@ function highAndLow(numbers) {
 function disemvowel(str) {
   return str.replace(/[aeouiAEOUI]/g, "");
 }
-console.log(disemvowel("awsawsuioe"));
+// console.log(disemvowel("awsawsuioe"));
 // ##################################################
 
 // Logical calculator
@@ -2875,5 +2875,172 @@ function logicalCalc(array, op) {
 // console.log(logicalCalc([true], "AND"), true); //true);
 // console.log(logicalCalc([true], "OR"), true); //true);
 // console.log(logicalCalc([true], "XOR"), true); //true);
+
+// ##################################################
+
+// Training JS #9: loop statement --while and do..while
+
+function padIt(str, n) {
+  while (n > 0) {
+    n % 2 === 0 ? (str = str + "*") : (str = "*" + str);
+    n--;
+  }
+  return str;
+}
+// console.log(padIt("a", 5));
+
+// ##################################################
+
+// Implement Array.prototype.filter()
+
+Array.prototype.filter = function (func) {
+  let filtered = [];
+  for (let i = 0; i < this.length; i++) {
+    if (func(this[i])) {
+      filtered.push(this[i]);
+    }
+  }
+  return filtered;
+};
+
+// ##################################################
+
+// Finish Guess the Number Game
+
+class Guesser {
+  constructor(number, lives) {
+    this.number = number;
+    this.lives = lives;
+  }
+
+  guess(n) {
+    if (this.lives === 0) {
+      throw "already dead";
+    }
+    if (n === this.number) {
+      return true;
+    } else if (n !== this.number) {
+      this.lives--;
+      return false;
+    }
+  }
+}
+
+// let guesser = new Guesser(3, 3);
+// console.log(guesser.guess(3));
+// console.log(guesser.guess(3));
+// console.log(guesser.guess(3));
+
+// ##################################################
+
+// Descending Order
+
+function descendingOrder(n) {
+  return Number(
+    String(n)
+      .split("")
+      .sort((a, b) => b - a)
+      .join("")
+  );
+}
+
+// ##################################################
+
+// List Filtering
+
+function filter_list(l) {
+  return l.filter((c) => typeof c === "number");
+}
+
+// ##################################################
+
+// Mumbling
+function accum(s) {
+  const arr = s.toLowerCase().split("");
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    let d = i === arr.length - 1 ? "" : "-";
+    str = str + arr[i].toUpperCase() + arr[i].repeat(i) + d;
+  }
+  return str;
+}
+// console.log(accum("Aws"));
+// ##################################################
+
+// UEFA EURO 2016
+
+function uefaEuro2016(teams, scores) {
+  let phrase = "";
+  if (scores[0] > scores[1]) {
+    phrase = `${teams[0]} won!`;
+  } else if (scores[1] > scores[0]) {
+    phrase = `${teams[1]} won!`;
+  } else {
+    phrase = `teams played draw.`;
+  }
+  return `At match ${teams[0]} - ${teams[1]}, ${phrase}`;
+}
+
+// console.log(uefaEuro2016(["Germany", "Ukraine"], [0, 2]));
+
+// ##################################################
+
+// Fuel Calculator
+/*
+2=> 5c
+4=> 10c
+6=> 15
+8=> 20
+10=> 25c max
+liters > 10 {(price -25)*liters}
+else
+9/2 = 4*5=20
+price-20
+liters/5
+*/
+function fuelPrice(litres, pricePerLitre) {
+  let result;
+  if (litres >= 10) {
+    result = ((pricePerLitre - 0.25) * litres).toFixed(2);
+  } else {
+    result = (
+      (pricePerLitre - (Math.floor(litres / 2) * 5) / 100) *
+      litres
+    ).toFixed(2);
+  }
+  return Number(result);
+}
+// console.log(fuelPrice(5, 1.23));
+// console.log(fuelPrice(8, 2.5));
+// console.log(fuelPrice(5, 5.6));
+
+// ##################################################
+
+// Polish alphabet
+
+function correctPolishLetters(string) {
+  let obj = {
+    ą: "a",
+    ć: "c",
+    ę: "e",
+    ł: "l",
+    ń: "n",
+    ó: "o",
+    ś: "s",
+    ź: "z",
+    ż: "z",
+  };
+  let result = "";
+  string.split("").forEach((l) => {
+    if (obj.hasOwnProperty(l)) {
+      result += obj[l];
+    } else {
+      result += l;
+    }
+  });
+  return result;
+}
+
+console.log(correctPolishLetters("Jędrzej Błądziński"));
 
 // ##################################################

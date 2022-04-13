@@ -43,7 +43,7 @@ function getMiddle(s) {
     ? s.slice(leng / 2 - 1, leng / 2 + 1)
     : s.slice(leng / 2, leng / 2 + 1);
 }
-console.log(getMiddle("A"));
+// console.log(getMiddle("A"));
 // ##################################################
 
 // You're a square!
@@ -51,5 +51,60 @@ console.log(getMiddle("A"));
 var isSquare = function (n) {
   return Number.isInteger(Math.sqrt(n));
 };
+
+// ##################################################
+
+// Jaden Casing Strings
+
+String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map((w) => {
+      let first = w.slice(0, 1).toUpperCase();
+      return first + w.substring(1);
+    })
+    .join(" ");
+};
+
+// let str = "How can mirrors be real if our eyes aren't real";
+// console.log(str.toJadenCase());
+
+// ##################################################
+
+// Shortest Word
+
+function findShort(s) {
+  let arr = [];
+  s.split(" ").forEach((w) => arr.push(w.length));
+  return Math.min(...arr);
+}
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+
+// ##################################################
+
+// Exes and Ohs
+
+function XO(str) {
+  let x = str.toLowerCase().split("x").length - 1;
+  let o = str.toLowerCase().split("o").length - 1;
+  return x === o;
+}
+// console.log(XO("xxOo"));
+
+// ##################################################
+
+// Isograms
+
+function isIsogram(str) {
+  let s1 = str.toLowerCase().length;
+  let s2 = new Set(str.toLowerCase()).size;
+  console.log(s1, s2);
+  return s1 === s2;
+}
+console.log(isIsogram("Dermatoglyphics"));
+console.log(isIsogram("isogram"));
+console.log(isIsogram("aba"));
+console.log(isIsogram("moOse"));
+console.log(isIsogram("isIsogram"));
+console.log(isIsogram(""));
 
 // ##################################################
