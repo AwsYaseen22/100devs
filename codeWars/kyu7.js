@@ -100,11 +100,42 @@ function isIsogram(str) {
   console.log(s1, s2);
   return s1 === s2;
 }
-console.log(isIsogram("Dermatoglyphics"));
-console.log(isIsogram("isogram"));
-console.log(isIsogram("aba"));
-console.log(isIsogram("moOse"));
-console.log(isIsogram("isIsogram"));
-console.log(isIsogram(""));
+// console.log(isIsogram("Dermatoglyphics"));
+// console.log(isIsogram("isogram"));
+// console.log(isIsogram("aba"));
+// console.log(isIsogram("moOse"));
+// console.log(isIsogram("isIsogram"));
+// console.log(isIsogram(""));
+
+// ##################################################
+
+// Complementary DNA
+
+function DNAStrand(dna) {
+  const dnaFull = {
+    A: "T",
+    T: "A",
+    G: "C",
+    C: "G",
+  };
+  return dna
+    .split("")
+    .map((l) => dnaFull[l])
+    .join("");
+}
+// console.log(DNAStrand("AAAA"));
+// ##################################################
+
+// Beginner Series #3 Sum of Numbers
+
+function getSum(a, b) {
+  const max = Math.max(a, b);
+  const min = Math.min(a, b);
+  let result = 0;
+  for (let i = min; i <= max; i++) {
+    result += i;
+  }
+  return result;
+}
 
 // ##################################################
