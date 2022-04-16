@@ -1,8 +1,8 @@
 document.querySelector(".start").addEventListener("click", startGame);
 document.querySelector("#globImg").classList.toggle("hidden");
+let formatNum = new Intl.NumberFormat("en-US");
 
 function startGame() {
-  console.log("callllllllllllled");
   // hide start btn
   document.querySelector("#start").classList.toggle("hidden");
   let random = Math.floor(Math.random() * 250);
@@ -10,9 +10,13 @@ function startGame() {
   fetch(url)
     .then((response) => response.json())
     .then((countries) => {
+      if (!countries.length) {
+        console.log(countries.message);
+        throw new Error(countries.message);
+      }
       filteredCountries = countries.filter((c) => c.cca3 !== "ISR");
       filteredCountries = filteredCountries.filter((c) => c.capital);
-      console.log(filteredCountries);
+      // console.log(filteredCountries);
       let country = filteredCountries[random];
       if (country) {
         createList(country);
@@ -22,7 +26,7 @@ function startGame() {
       }
     })
     .then((country) => {
-      console.log(country);
+      // console.log(country);
       // get the common name to compare the guess with it
       let answer = country.name.common;
       // set flag image
@@ -47,11 +51,18 @@ function startGame() {
       document
         .querySelector("#hint2")
         .addEventListener("click", () => getHint(2, country));
+    })
+    .catch((err) => {
+      console.log(err.message);
+      document.querySelector(".errorMsg").innerText = err.message;
+      document.querySelector(".errorMsg").innerText +=
+        "\nPlease check your internet connection";
+      document.querySelector(".errorMsg").classList.toggle("hidden");
     });
 }
 
 function createList(country) {
-  console.log(country);
+  // console.log(country);
   let fullDetails = document.querySelector(".fullDetails");
   let continents = String(...country?.continents);
   let currencies =
@@ -67,7 +78,7 @@ function createList(country) {
       <li>Languages: ${languages}</li>
       <li>Region: ${country?.region}</li>
       <li>Sub region: ${country?.subregion}</li>
-      <li>Area: ${country?.area}</li>
+      <li>Area: ${formatNum.format(country?.area)} KM</li>
       <li>Car Side: ${country?.car.side}</li>
     </ul>
         `;
@@ -85,12 +96,12 @@ function checkAnswer(answer) {
   const guess = document.getElementById("answerText").value;
   let resultText = document.querySelector("#resultText");
   if (guess === answer) {
-    console.log("Congratulatios");
+    // console.log("Congratulatios");
     resultText.innerText = "Congratulatios";
     document.querySelector(".fullDetails").classList.toggle("hidden");
   } else {
-    console.log("Better luck next time!");
-    resultText.innerText = "Better luch next time!";
+    // console.log("Better luck next time!");
+    resultText.innerText = "Better luck next time!";
     document.querySelector(".fullDetails").classList.toggle("hidden");
   }
   document.querySelector("#restart").classList.toggle("hidden");
@@ -102,7 +113,7 @@ function restart() {
 }
 function getHint(n, country) {
   if (n === 1) {
-    console.log(n, country.subregion);
+    // console.log(n, country.subregion);
     document.querySelector(
       "#hint1Text"
     ).innerText = `It's in the sub-reagion ${country.subregion}`;
@@ -110,7 +121,7 @@ function getHint(n, country) {
 
     document.querySelector("#hint2").classList.toggle("hidden");
   } else {
-    console.log(n, country.capital);
+    // console.log(n, country.capital);
     document.querySelector(
       "#hint2Text"
     ).innerText = `It's capital: ${country.capital}`;
