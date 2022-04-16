@@ -14,8 +14,12 @@ function startGame() {
       filteredCountries = filteredCountries.filter((c) => c.capital);
       console.log(filteredCountries);
       let country = filteredCountries[random];
-      createList(country);
-      return country;
+      if (country) {
+        createList(country);
+        return country;
+      } else {
+        throw new Error("please try again");
+      }
     })
     .then((country) => {
       console.log(country);
