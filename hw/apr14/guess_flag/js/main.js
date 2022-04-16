@@ -95,7 +95,7 @@ function checkAnswer(answer) {
 
   const guess = document.getElementById("answerText").value;
   let resultText = document.querySelector("#resultText");
-  if (guess === answer) {
+  if (guess.toLowerCase() === answer.toLowerCase()) {
     // console.log("Congratulatios");
     resultText.innerText = "Congratulatios";
     document.querySelector(".fullDetails").classList.toggle("hidden");
