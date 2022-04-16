@@ -139,3 +139,24 @@ function getSum(a, b) {
 }
 
 // ##################################################
+
+// Friend or Foe?
+
+function friend(friends) {
+  return friends.filter((name) => name.length === 4);
+}
+
+// ##################################################
+
+// Find the next perfect square!
+
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  if (Number.isInteger(Math.sqrt(sq))) {
+    return Math.pow(Math.sqrt(sq) + 1, 2);
+  } else {
+    return -1;
+  }
+}
+
+// ##################################################

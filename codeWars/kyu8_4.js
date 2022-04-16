@@ -107,5 +107,70 @@ function longest(s1, s2) {
   return arr.sort().join("");
 }
 
-console.log(longest("aretheyhere", "yestheyarehere"));
+// console.log(longest("aretheyhere", "yestheyarehere"));
+
+// ##################################################
+
+// Evil or Odious
+
+function evil(n) {
+  let bi = n.toString(2);
+  if (bi.match(/1/g).length % 2 === 0) {
+    return `It's Evil!`;
+  } else {
+    return `It's Odious!`;
+  }
+}
+// console.log(evil(16));
+
+// ##################################################
+
+// Grasshopper - Create the rooms
+
+// Add rooms here
+var rooms = {
+  room1: {
+    name: {},
+    description: {},
+    completed: {},
+  },
+  room2: {
+    name: {},
+    description: {},
+    completed: {},
+  },
+  room3: {
+    name: {},
+    description: {},
+    completed: {},
+  },
+};
+
+// ##################################################
+
+// Training JS #11: loop statement --break,continue
+
+function grabDoll(dolls) {
+  var bag = [];
+  for (let i = 0; i < dolls.length; i++) {
+    if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") {
+      bag.push(dolls[i]);
+    } else {
+      continue;
+    }
+    if (bag.length === 3) {
+      break;
+    }
+  }
+  return bag;
+}
+
+// ##################################################
+
+// CSV representation of array
+// another solve : return array.join('\n');
+function toCsvText(array) {
+  return array.reduce((a, c) => String(a + "\n") + c);
+}
+
 // ##################################################
