@@ -187,5 +187,62 @@ function charFreq(message) {
     return a;
   }, {});
 }
-console.log(charFreq("I like cats"));
+// console.log(charFreq("I like cats"));
+
+// ##################################################
+
+// Check same case
+
+function sameCase(a, b) {
+  if (/[a-z]/.test(a) && /[a-z]/.test(b)) {
+    return 1;
+  } else if (/[A-Z]/.test(a) && /[A-Z]/.test(b)) {
+    return 1;
+  } else if (/[a-z]/.test(a) && /[A-Z]/.test(b)) {
+    return 0;
+  } else if (/[A-Z]/.test(a) && /[a-z]/.test(b)) {
+    return 0;
+  } else if (/[^a-zA-Z]/.test(a) || /[^a-zA-Z]/.test(b)) {
+    return -1;
+  }
+}
+
+// console.log(sameCase("a", "B"));
+
+// ##################################################
+
+// Training JS #12: loop statement --for..in and for..of
+
+function giveMeFive(obj) {
+  let result = [];
+  for (let w in obj) {
+    if (w.length === 5) {
+      result.push(w);
+    }
+    if (obj[w].length === 5) {
+      result.push(obj[w]);
+    }
+  }
+  return result;
+}
+
+// ##################################################
+
+// Grasshopper - Bug Squashing
+
+// very bad one
+
+var health = 100;
+var position = 0;
+var coins = 0;
+
+function main() {
+  rollDice();
+  move();
+  combat();
+  getCoins();
+  buyHealth();
+  printStatus();
+}
+
 // ##################################################
