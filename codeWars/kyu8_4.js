@@ -174,3 +174,18 @@ function toCsvText(array) {
 }
 
 // ##################################################
+
+// Character Frequency
+
+function charFreq(message) {
+  return message.split("").reduce((a, c) => {
+    if (c in a) {
+      a[c] += 1;
+    } else {
+      a[c] = 1;
+    }
+    return a;
+  }, {});
+}
+console.log(charFreq("I like cats"));
+// ##################################################
