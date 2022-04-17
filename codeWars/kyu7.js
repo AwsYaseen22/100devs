@@ -160,3 +160,44 @@ function findNextSquare(sq) {
 }
 
 // ##################################################
+
+// Binary Addition
+
+function addBinary(a, b) {
+  return (a + b).toString(2);
+}
+
+// ##################################################
+
+// Regex validate PIN code
+
+function validatePIN(pin) {
+  return /^[0-9]{4}$/.test(pin) || /^[0-9]{6}$/.test(pin) ? true : false;
+}
+// console.log(validatePIN("12345"));
+
+// ##################################################
+
+// Sum of odd numbers
+/*
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29
+
+each row start by (row*(row-1))+1
+*/
+// from answers ====> Math.pow(n,3) :(
+
+function rowSumOddNumbers(n) {
+  let startOfRow = n * (n - 1) + 1;
+  let result = startOfRow;
+  for (let i = 1; i < n; i++) {
+    startOfRow += 2;
+    result += startOfRow;
+  }
+  return result;
+}
+// console.log(rowSumOddNumbers(3));
+// ##################################################
