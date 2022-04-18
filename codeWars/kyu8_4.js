@@ -246,3 +246,32 @@ function main() {
 }
 
 // ##################################################
+
+// pick a set of first elements
+
+function first(arr, n = 1) {
+  return arr.slice(0, n);
+}
+
+// ##################################################
+
+// Did she say hallo?
+
+function validateHello(greetings) {
+  res = /h[ea]llo|ciao|salut|hola|ahoj|czesc/i.test(greetings);
+  return res;
+}
+
+// ##################################################
+
+// Training JS #18: Methods of String object--concat() split() and its good friend join()
+
+function splitAndMerge(string, separator) {
+  let arr = string.split(" ");
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].split("").join(separator);
+  }
+  return arr.join(" ");
+}
+// console.log(splitAndMerge("My name is John", "-"));
+// ##################################################
