@@ -201,3 +201,43 @@ function rowSumOddNumbers(n) {
 }
 // console.log(rowSumOddNumbers(3));
 // ##################################################
+
+// Printer Errors
+
+function printerError(s) {
+  let n = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (/[^a-m]/.test(s[i])) {
+      n++;
+    }
+  }
+  return `${n}/${s.length}`;
+}
+
+// ##################################################
+
+// Categorize New Member
+
+function openOrSenior(data) {
+  let result = [];
+  for (let i = 0; i < data.length; i++) {
+    let age = data[i][0];
+    let han = data[i][1];
+    if (age >= 55 && han > 7) {
+      result.push("Senior");
+    } else {
+      result.push("Open");
+    }
+  }
+  return result;
+}
+
+// ##################################################
+
+// String ends with?
+// turns out that there is already a method str.endsWith(endings) :-o
+function solution(str, ending) {
+  return str.slice(str.length - ending.length) === ending;
+}
+// console.log(solution("abcde", "cde"));
+// ##################################################
