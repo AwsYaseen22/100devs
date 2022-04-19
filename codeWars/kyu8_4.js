@@ -275,3 +275,23 @@ function splitAndMerge(string, separator) {
 }
 // console.log(splitAndMerge("My name is John", "-"));
 // ##################################################
+
+// Coefficients of the Quadratic Equation
+
+function quadratic(x1, x2) {
+  // (x-x1)*(x-x2)
+
+  return [1, -x1 + -x2, -x1 * -x2];
+  // let first = Math.pow(x,2)
+  // let second = (x*x) (x*-x2) (-x1*x) (-x1*-x2)
+  //                     -2x      -1x      2
+
+  // 1 , -x1+-x2 , -x1*-x2
+  // 1 ,  -2 ,1
+  // 1 ,  -13 ,36
+}
+// x1=0,x2=1
+// x1=1,x2=1
+// x1=-4,x2=-9
+
+// ##################################################
