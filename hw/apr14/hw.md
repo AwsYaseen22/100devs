@@ -3,7 +3,7 @@
 - [x] Do: Make the cocktailDB api work with spaces between the names!
 - [x] Do: Codewars Daily!
 - [x] Do: Anki Daily!
-- [] Do: Find three APIs and build three simple apps using those APIs (Not all of these work, but it is a start: https://github.com/public-apis/public-apis)
+- [x] Do: Find three APIs and build three simple apps using those APIs (Not all of these work, but it is a start: https://github.com/public-apis/public-apis)
 
 ## Want to push?
 
