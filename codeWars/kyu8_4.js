@@ -295,3 +295,48 @@ function quadratic(x1, x2) {
 // x1=-4,x2=-9
 
 // ##################################################
+
+// Freudian translator
+
+function toFreud(string) {
+  if (string.length === 0) {
+    return "";
+  }
+  return string
+    .split(" ")
+    .map((w) => "sex")
+    .join(" ");
+}
+
+// ##################################################
+
+// Collatz Conjecture (3n+1)
+
+var hotpo = function (n) {
+  if (n == 0) return 0; //Optional Handler to n = 0
+  let result = 0;
+  while (n > 1) {
+    if (n % 2 === 0) {
+      n /= 2;
+      result++;
+    } else {
+      n = 3 * n + 1;
+      result++;
+    }
+  }
+  return result;
+};
+
+// ##################################################
+
+// Grasshopper - Terminal Game #1
+
+function Hero(name) {
+  this.name = name ? name : "Hero";
+  this.position = "00";
+  this.health = 100;
+  this.damage = 5;
+  this.experience = 0;
+}
+
+// ##################################################

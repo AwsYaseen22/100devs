@@ -249,3 +249,43 @@ const binaryArrayToNumber = (arr) => {
 };
 
 // ##################################################
+
+// Number of People in the Bus
+
+var number = function (busStops) {
+  let result = [0, 0];
+  for (let i = 0; i < busStops.length; i++) {
+    result[0] += busStops[i][0];
+    i === 0 ? (result[1] = 0) : (result[1] += busStops[i][1]);
+  }
+  return result[0] - result[1];
+};
+
+// console.log(
+//   number([
+//     [10, 0],
+//     [3, 5],
+//     [5, 8],
+//   ])
+// );
+
+// ##################################################
+
+// Odd or Even?
+
+function oddOrEven(array) {
+  return array.reduce((a, c) => a + c, 0) % 2 === 0 ? "even" : "odd";
+}
+
+// ##################################################
+
+// Reverse words
+
+function reverseWords(str) {
+  return str
+    .split(" ")
+    .map((w) => w.split("").reverse().join(""))
+    .join(" ");
+}
+
+// ##################################################
