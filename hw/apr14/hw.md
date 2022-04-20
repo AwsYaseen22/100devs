@@ -16,21 +16,26 @@
 
 - [x] Please share a link to your cocktailDB Code (codepen, jsbin, ect):
       cocktails_list
+      https://github.com/AwsYaseen22/cocktails_list
 
 - [x] Please share a link to your first API app (codepen, jsbin, github, ect):
       corona
+      https://github.com/AwsYaseen22/corona_updates
 
 - [x] Please share a link to your second API app (codepen, jsbin, github, ect:
       guess_flag
+      https://github.com/AwsYaseen22/guess_flag
 
 - [x] Please share a link to your third API app (codepen, jsbin, github, ect):
-      N/A
+      word of the day
+      https://github.com/AwsYaseen22/wordOfTheDay
 
 - [x] Please share a link/s to your five codewars solutions:
-      just 5 ?!?!?
+      https://github.com/AwsYaseen22/codeWars
 
 - [x] If you did the push work, please select yes:
       Yes
 
 - [x] Link to your make a rotating list of drinks (an automatic carousel) from the cocktailDB code:
       cocktails_carousel
+      https://github.com/AwsYaseen22/cocktails_carousel
