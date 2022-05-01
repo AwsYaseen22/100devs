@@ -38,8 +38,8 @@ recent projects:
     - with real clients 
     - if there is no client build it as there is a client 
     - do not mention the code camp
-    - don,t name it 100Hours project use other names
-    - dont snich on yourself by list other projects to make you clear you are in camp
+    - don't name it 100Hours project use other names
+    - don't snich on yourself by list other projects to make you clear you are in camp
     - brand a project creat a landing page for it
     - if it is working put the linkes to them
 
@@ -58,7 +58,7 @@ put actual client
 that is the first reference
 
 - the last one is the old things i did
-. connect the old work with it sector in any way
+. connect the old work with IT sector in any way
 . like you work in restaurant and want to upgrage the POS so i learn coding to make this happen
 
 
