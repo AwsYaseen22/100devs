@@ -134,6 +134,8 @@ function Stopwatch() {
   let endTime = 0;
   let running = false;
   let duration = 0;
+  this.displayDuration = 0;
+
   this.start = () => {
     if (running) {
       console.log("it is already running!");
@@ -196,16 +198,27 @@ let durationScreen = document.querySelector("#duration");
 let startButton = document.querySelector("#start");
 let stopButton = document.querySelector("#stop");
 let resetButton = document.querySelector("#reset");
+let intervId = null;
 
 startButton.addEventListener("click", () => {
   sw.start();
-  durationScreen.innerText = "counting...";
+  // durationScreen.innerText = "counting...";
+  intervId = setInterval(() => {
+    sw.displayDuration += 1;
+    console.log(sw.displayDuration);
+    durationScreen.innerText = sw.displayDuration;
+  }, 1000);
 });
 stopButton.addEventListener("click", () => {
   sw.stop();
+  clearInterval(intervId);
   durationScreen.innerText = sw.result;
+  intervId = null;
 });
 resetButton.addEventListener("click", () => {
   sw.reset();
+  clearInterval(intervId);
+  sw.displayDuration = 0;
   durationScreen.innerText = sw.result;
+  intervId = null;
 });
