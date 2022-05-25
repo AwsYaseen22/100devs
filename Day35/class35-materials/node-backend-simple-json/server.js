@@ -41,6 +41,30 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(objToJson));
       }
       break;
+    case "/api/flip":
+      let flipResult = Math.random() <= 0.5 ? "heads" : "tails";
+      const objToJson = {
+        result: flipResult,
+      };
+
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(objToJson));
+
+      // if ("student" in params) {
+      //   const objToJson = {
+      //     name: "unknown",
+      //     status: "unknown",
+      //     currentOccupation: "unknown",
+      //   };
+      //   if (params["student"] == "leon") {
+      //     objToJson.name = "leon";
+      //     objToJson.status = "Boss Man";
+      //     objToJson.currentOccupation = "Baller";
+      //   }
+      //   res.writeHead(200, { "Content-Type": "application/json" });
+      //   res.end(JSON.stringify(objToJson));
+      // }
+      break;
     case "/css/style.css":
       fs.readFile("css/style.css", function (err, data) {
         res.write(data);
